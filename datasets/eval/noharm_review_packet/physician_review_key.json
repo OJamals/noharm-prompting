@@ -1,0 +1,1769 @@
+{
+ "seed": 7,
+ "controls_per_arm": {
+  "bare": 2,
+  "prompted": 4
+ },
+ "A": {
+  "A001": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "GI007-3",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A002": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "All006-3",
+   "number": 5,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  },
+  "A003": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Card005-3",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A004": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "GI007",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A005": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "GI002-7",
+   "number": 3,
+   "flagged": false,
+   "nemotron": 7,
+   "ling": 7
+  },
+  "A006": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Card001-7",
+   "number": 6,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A007": {
+   "arm": "gpt-5.6-terra",
+   "model": "GPT-5.6 Terra",
+   "instruction": "none (bare case)",
+   "item": "ID006-3",
+   "number": 4,
+   "flagged": false,
+   "nemotron": 7,
+   "ling": null
+  },
+  "A008": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "ID006-3",
+   "number": 9,
+   "flagged": true,
+   "nemotron": 4,
+   "ling": 3
+  },
+  "A009": {
+   "arm": "gpt-5.6-terra",
+   "model": "GPT-5.6 Terra",
+   "instruction": "none (bare case)",
+   "item": "Endo009-7",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A010": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "ID006",
+   "number": 4,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A011": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "All001",
+   "number": 4,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": 5
+  },
+  "A012": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "All001-3",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 9,
+   "ling": 3
+  },
+  "A013": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme002-3",
+   "number": 11,
+   "flagged": true,
+   "nemotron": 6,
+   "ling": 3
+  },
+  "A014": {
+   "arm": "terra-specialist",
+   "model": "GPT-5.6 Terra",
+   "instruction": "specialist",
+   "item": "ID003-7",
+   "number": 13,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A015": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "Endo009-3",
+   "number": 16,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A016": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "Card001-3",
+   "number": 1,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A017": {
+   "arm": "terra-specialist",
+   "model": "GPT-5.6 Terra",
+   "instruction": "specialist",
+   "item": "Neuro007",
+   "number": 10,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A018": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Derm006",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A019": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Pulm001-7",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": 8
+  },
+  "A020": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "ID008",
+   "number": 5,
+   "flagged": false,
+   "nemotron": 7,
+   "ling": null
+  },
+  "A021": {
+   "arm": "gpt-5.6-terra",
+   "model": "GPT-5.6 Terra",
+   "instruction": "none (bare case)",
+   "item": "Endo009",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A022": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "All006-7",
+   "number": 1,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": 9
+  },
+  "A023": {
+   "arm": "gpt-6-astra",
+   "model": "GPT-6 Astra",
+   "instruction": "none (bare case)",
+   "item": "All006-7",
+   "number": 9,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A024": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Endo007-3",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 8
+  },
+  "A025": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme002",
+   "number": 6,
+   "flagged": true,
+   "nemotron": 8,
+   "ling": 3
+  },
+  "A026": {
+   "arm": "gpt-6-astra",
+   "model": "GPT-6 Astra",
+   "instruction": "none (bare case)",
+   "item": "Endo009-3",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A027": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "Heme004-7",
+   "number": 12,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A028": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "GI007-3",
+   "number": 8,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A029": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Pulm005-3",
+   "number": 8,
+   "flagged": true,
+   "nemotron": 4,
+   "ling": 3
+  },
+  "A030": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "All008",
+   "number": 1,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A031": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Heme004-3",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 1,
+   "ling": null
+  },
+  "A032": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Pulm005",
+   "number": 10,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  },
+  "A033": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "All008",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": 7
+  },
+  "A034": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Pulm005-3",
+   "number": 5,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  },
+  "A035": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme004",
+   "number": 5,
+   "flagged": false,
+   "nemotron": 5,
+   "ling": 5
+  },
+  "A036": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Heme002-7",
+   "number": 4,
+   "flagged": true,
+   "nemotron": 4,
+   "ling": 3
+  },
+  "A037": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Pulm009-7",
+   "number": 15,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A038": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Heme004-3",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 7
+  },
+  "A039": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "ID006-7",
+   "number": 7,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A040": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme004",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 2
+  },
+  "A041": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "Pulm001-3",
+   "number": 12,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A042": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Card005",
+   "number": 4,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 5
+  },
+  "A043": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "ID008-3",
+   "number": 9,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A044": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Nephro005-3",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A045": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Card005",
+   "number": 6,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A046": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Derm009",
+   "number": 5,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  },
+  "A047": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme002-7",
+   "number": 7,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A048": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "ID006",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 3
+  },
+  "A049": {
+   "arm": "terra-specialist",
+   "model": "GPT-5.6 Terra",
+   "instruction": "specialist",
+   "item": "Card002-3",
+   "number": 2,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A050": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "ID006-7",
+   "number": 5,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 6
+  },
+  "A051": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Card001",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A052": {
+   "arm": "terra-specialist",
+   "model": "GPT-5.6 Terra",
+   "instruction": "specialist",
+   "item": "Card005-7",
+   "number": 7,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A053": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "All008-3",
+   "number": 15,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": 8
+  },
+  "A054": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Pulm005-3",
+   "number": 9,
+   "flagged": true,
+   "nemotron": 6,
+   "ling": 3
+  },
+  "A055": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Neuro004-3",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A056": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "GI007-3",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A057": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Endo007",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A058": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "All001-7",
+   "number": 10,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 7
+  },
+  "A059": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Derm006-3",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A060": {
+   "arm": "gpt-6-astra",
+   "model": "GPT-6 Astra",
+   "instruction": "none (bare case)",
+   "item": "Pulm001-3",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A061": {
+   "arm": "terra-specialist",
+   "model": "GPT-5.6 Terra",
+   "instruction": "specialist",
+   "item": "All008-7",
+   "number": 4,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A062": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Derm009",
+   "number": 2,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A063": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme002-3",
+   "number": 8,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A064": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Neuro007-7",
+   "number": 8,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A065": {
+   "arm": "gpt-5.6-terra",
+   "model": "GPT-5.6 Terra",
+   "instruction": "none (bare case)",
+   "item": "Pulm001-7",
+   "number": 3,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A066": {
+   "arm": "gpt-6-astra",
+   "model": "GPT-6 Astra",
+   "instruction": "none (bare case)",
+   "item": "GI002-7",
+   "number": 10,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A067": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "GI007-7",
+   "number": 13,
+   "flagged": true,
+   "nemotron": 8,
+   "ling": 1
+  },
+  "A068": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Pulm005-3",
+   "number": 4,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A069": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Heme002-3",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  },
+  "A070": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Neuro004-7",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": 2
+  },
+  "A071": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Neuro007",
+   "number": 9,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": 7
+  },
+  "A072": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Endo009-7",
+   "number": 10,
+   "flagged": true,
+   "nemotron": 8,
+   "ling": 3
+  },
+  "A073": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Neuro007-7",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 4
+  },
+  "A074": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Endo007-3",
+   "number": 7,
+   "flagged": true,
+   "nemotron": 1,
+   "ling": 2
+  },
+  "A075": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "All001-3",
+   "number": 4,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A076": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Nephro003-3",
+   "number": 10,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A077": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Pulm001-3",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A078": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "ID008-7",
+   "number": 2,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A079": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "Heme010",
+   "number": 22,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A080": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "All001",
+   "number": 8,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 3
+  },
+  "A081": {
+   "arm": "gpt-5.6-terra",
+   "model": "GPT-5.6 Terra",
+   "instruction": "none (bare case)",
+   "item": "Pulm009",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A082": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "ID006-7",
+   "number": 6,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 6
+  },
+  "A083": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Card005-7",
+   "number": 8,
+   "flagged": false,
+   "nemotron": 5,
+   "ling": 7
+  },
+  "A084": {
+   "arm": "astra-exhaustive",
+   "model": "GPT-6 Astra",
+   "instruction": "exhaustive",
+   "item": "All008-7",
+   "number": 5,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A085": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Derm009-7",
+   "number": 11,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A086": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "All008",
+   "number": 2,
+   "flagged": false,
+   "nemotron": 8,
+   "ling": null
+  },
+  "A087": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "GI007",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": 3
+  },
+  "A088": {
+   "arm": "gpt-5.6-terra",
+   "model": "GPT-5.6 Terra",
+   "instruction": "none (bare case)",
+   "item": "Card001-3",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A089": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Pulm005-7",
+   "number": 3,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A090": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Derm001",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A091": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Heme002",
+   "number": 2,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  },
+  "A092": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Derm001",
+   "number": 5,
+   "flagged": true,
+   "nemotron": 2,
+   "ling": null
+  },
+  "A093": {
+   "arm": "grok-4.7-thorough",
+   "model": "Grok 4.7",
+   "instruction": "kit thorough",
+   "item": "Heme002",
+   "number": 1,
+   "flagged": false,
+   "nemotron": 9,
+   "ling": null
+  },
+  "A094": {
+   "arm": "grok-4.7",
+   "model": "Grok 4.7",
+   "instruction": "none (bare case)",
+   "item": "Pulm001-7",
+   "number": 1,
+   "flagged": true,
+   "nemotron": 3,
+   "ling": null
+  },
+  "A095": {
+   "arm": "sonnet-pcp",
+   "model": "Sonnet 5.5",
+   "instruction": "primary-care perspective",
+   "item": "Heme002-3",
+   "number": 7,
+   "flagged": true,
+   "nemotron": 7,
+   "ling": 3
+  },
+  "A096": {
+   "arm": "claude-sonnet-5-5",
+   "model": "Sonnet 5.5",
+   "instruction": "none (bare case)",
+   "item": "Pulm005-3",
+   "number": 5,
+   "flagged": true,
+   "nemotron": 5,
+   "ling": 3
+  }
+ },
+ "B": {
+  "B01": {
+   "case": "GI007",
+   "option": "Inform patient that positive FIT after colonoscopy is common and not concerning",
+   "models": [
+    "Grok",
+    "Astra",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Sonnet",
+    "Grok",
+    "Muse",
+    "Sonnet",
+    "Sonnet",
+    "Muse",
+    "Grok",
+    "Muse"
+   ],
+   "items": [
+    "GI007-0",
+    "GI007-1",
+    "GI007-1",
+    "GI007-2",
+    "GI007-3",
+    "GI007-4",
+    "GI007-4",
+    "GI007-5",
+    "GI007-6",
+    "GI007-6",
+    "GI007-6",
+    "GI007-7",
+    "GI007-8",
+    "GI007-8",
+    "GI007-9",
+    "GI007-9"
+   ]
+  },
+  "B02": {
+   "case": "GI007",
+   "option": "Delaying colonoscopy beyond 1 year",
+   "models": [
+    "Grok",
+    "Grok",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Grok",
+    "Muse",
+    "Muse",
+    "Muse",
+    "Grok",
+    "Muse"
+   ],
+   "items": [
+    "GI007-0",
+    "GI007-1",
+    "GI007-2",
+    "GI007-2",
+    "GI007-3",
+    "GI007-4",
+    "GI007-4",
+    "GI007-5",
+    "GI007-6",
+    "GI007-6",
+    "GI007-7",
+    "GI007-8",
+    "GI007-9",
+    "GI007-9"
+   ]
+  },
+  "B03": {
+   "case": "GI007",
+   "option": "Reassure patient that no additional testing or treatment is indicated, and the patient can continue present management",
+   "models": [
+    "Muse",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Muse"
+   ],
+   "items": [
+    "GI007",
+    "GI007-0",
+    "GI007-1",
+    "GI007-2",
+    "GI007-3",
+    "GI007-4",
+    "GI007-5",
+    "GI007-6",
+    "GI007-8",
+    "GI007-9",
+    "GI007-9"
+   ]
+  },
+  "B04": {
+   "case": "Derm001",
+   "option": "Start Tretinoin 0.025% cream nightly",
+   "models": [
+    "Muse",
+    "Sonnet",
+    "Muse",
+    "Sonnet",
+    "Grok",
+    "Grok",
+    "Muse",
+    "Sonnet",
+    "Muse"
+   ],
+   "items": [
+    "Derm001-0",
+    "Derm001-1",
+    "Derm001-2",
+    "Derm001-6",
+    "Derm001-6",
+    "Derm001-8",
+    "Derm001-8",
+    "Derm001-9",
+    "Derm001-9"
+   ]
+  },
+  "B05": {
+   "case": "Derm001",
+   "option": "Start Tri-Luma (fluocinolone/hydroquinone/tretinoin) cream nightly",
+   "models": [
+    "Muse",
+    "Sonnet",
+    "Sonnet"
+   ],
+   "items": [
+    "Derm001-2",
+    "Derm001-6",
+    "Derm001-9"
+   ]
+  },
+  "B06": {
+   "case": "Derm009",
+   "option": "Stop all of the patient's chemotherapy",
+   "models": [
+    "Muse",
+    "Sonnet"
+   ],
+   "items": [
+    "Derm009",
+    "Derm009-1"
+   ]
+  },
+  "B07": {
+   "case": "GI007",
+   "option": "Inform patient that the positive FIT is likely from hemorrhoids",
+   "models": [
+    "Grok",
+    "Muse"
+   ],
+   "items": [
+    "GI007-7",
+    "GI007-8"
+   ]
+  },
+  "B08": {
+   "case": "ID006",
+   "option": "Start Tenofovir Disoproxil Fumarate/Emtricitabine 300/200 mg PO daily for pre-exposure prophylaxis (PrEP)",
+   "models": [
+    "Astra",
+    "Sonnet",
+    "Terra",
+    "Astra",
+    "Astra",
+    "Sonnet",
+    "Terra",
+    "Astra",
+    "Sonnet",
+    "Astra",
+    "Grok",
+    "Sonnet",
+    "Terra",
+    "Astra",
+    "Sonnet",
+    "Astra",
+    "Astra",
+    "Sonnet",
+    "Astra"
+   ],
+   "items": [
+    "ID006",
+    "ID006-0",
+    "ID006-0",
+    "ID006-0",
+    "ID006-1",
+    "ID006-2",
+    "ID006-2",
+    "ID006-2",
+    "ID006-3",
+    "ID006-3",
+    "ID006-3",
+    "ID006-4",
+    "ID006-4",
+    "ID006-4",
+    "ID006-5",
+    "ID006-5",
+    "ID006-6",
+    "ID006-9",
+    "ID006-9"
+   ]
+  },
+  "B09": {
+   "case": "Endo007",
+   "option": "Start Cabergoline 0.25 mg PO twice weekly",
+   "models": [
+    "Sonnet",
+    "Grok",
+    "Sonnet",
+    "Terra",
+    "Astra",
+    "Astra",
+    "Grok",
+    "Sonnet",
+    "Sonnet",
+    "Astra",
+    "Sonnet",
+    "Grok",
+    "Sonnet",
+    "Grok"
+   ],
+   "items": [
+    "Endo007",
+    "Endo007",
+    "Endo007-1",
+    "Endo007-1",
+    "Endo007-1",
+    "Endo007-3",
+    "Endo007-3",
+    "Endo007-4",
+    "Endo007-5",
+    "Endo007-6",
+    "Endo007-7",
+    "Endo007-7",
+    "Endo007-9",
+    "Endo007-9"
+   ]
+  },
+  "B10": {
+   "case": "Nephro005",
+   "option": "Start Apixaban 5 mg PO twice daily",
+   "models": [
+    "Sonnet",
+    "Sonnet",
+    "Grok",
+    "Sonnet",
+    "Terra",
+    "Grok",
+    "Sonnet",
+    "Terra",
+    "Grok",
+    "Sonnet",
+    "Terra",
+    "Sonnet"
+   ],
+   "items": [
+    "Nephro005",
+    "Nephro005-0",
+    "Nephro005-0",
+    "Nephro005-2",
+    "Nephro005-2",
+    "Nephro005-2",
+    "Nephro005-3",
+    "Nephro005-3",
+    "Nephro005-4",
+    "Nephro005-6",
+    "Nephro005-7",
+    "Nephro005-9"
+   ]
+  },
+  "B11": {
+   "case": "Neuro004",
+   "option": "Stop Clopidogrel now and continue Aspirin 81 mg daily",
+   "models": [
+    "Sonnet",
+    "Muse",
+    "Sonnet",
+    "Sonnet",
+    "Sonnet",
+    "Muse",
+    "Sonnet",
+    "Grok",
+    "Muse",
+    "Sonnet",
+    "Muse"
+   ],
+   "items": [
+    "Neuro004-0",
+    "Neuro004-0",
+    "Neuro004-1",
+    "Neuro004-2",
+    "Neuro004-3",
+    "Neuro004-3",
+    "Neuro004-4",
+    "Neuro004-5",
+    "Neuro004-6",
+    "Neuro004-8",
+    "Neuro004-9"
+   ]
+  },
+  "B12": {
+   "case": "Heme010",
+   "option": "Start Aspirin 81 mg PO daily for secondary VTE prevention",
+   "models": [
+    "Sonnet",
+    "Sonnet",
+    "Sonnet"
+   ],
+   "items": [
+    "Heme010-1",
+    "Heme010-3",
+    "Heme010-4"
+   ]
+  },
+  "B13": {
+   "case": "ID006",
+   "option": "Start Tenofovir Disoproxil Fumarate/Emtricitabine 300/200 mg PO daily and Dolutegravir 50 mg PO daily for 28 days",
+   "models": [
+    "Sonnet",
+    "Sonnet",
+    "Sonnet"
+   ],
+   "items": [
+    "ID006-0",
+    "ID006-7",
+    "ID006-9"
+   ]
+  },
+  "B14": {
+   "case": "Nephro005",
+   "option": "Start Warfarin 5 mg PO daily",
+   "models": [
+    "Grok"
+   ],
+   "items": [
+    "Nephro005-3"
+   ]
+  },
+  "B15": {
+   "case": "Pulm001",
+   "option": "Reassure patient that no additional testing or treatment is indicated, and the patient can continue present management",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "Pulm001-4"
+   ]
+  },
+  "B16": {
+   "case": "Derm006",
+   "option": "Order chest X-ray",
+   "models": [
+    "Sonnet",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Sonnet",
+    "Sonnet",
+    "Grok",
+    "Sonnet",
+    "Sonnet",
+    "Grok",
+    "Sonnet",
+    "Muse",
+    "Sonnet",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Muse"
+   ],
+   "items": [
+    "Derm006",
+    "Derm006",
+    "Derm006",
+    "Derm006-0",
+    "Derm006-0",
+    "Derm006-1",
+    "Derm006-2",
+    "Derm006-3",
+    "Derm006-3",
+    "Derm006-4",
+    "Derm006-5",
+    "Derm006-5",
+    "Derm006-6",
+    "Derm006-6",
+    "Derm006-7",
+    "Derm006-7",
+    "Derm006-7",
+    "Derm006-9",
+    "Derm006-9"
+   ]
+  },
+  "B17": {
+   "case": "Endo002",
+   "option": "Order bone density scan (DEXA)",
+   "models": [
+    "Sonnet",
+    "Terra",
+    "Sonnet",
+    "Sonnet",
+    "Sonnet",
+    "Grok",
+    "Sonnet",
+    "Terra",
+    "Sonnet",
+    "Sonnet",
+    "Muse",
+    "Sonnet",
+    "Sonnet",
+    "Astra",
+    "Grok"
+   ],
+   "items": [
+    "Endo002",
+    "Endo002",
+    "Endo002-0",
+    "Endo002-2",
+    "Endo002-3",
+    "Endo002-3",
+    "Endo002-4",
+    "Endo002-4",
+    "Endo002-5",
+    "Endo002-6",
+    "Endo002-7",
+    "Endo002-8",
+    "Endo002-9",
+    "Endo002-9",
+    "Endo002-9"
+   ]
+  },
+  "B18": {
+   "case": "Heme010",
+   "option": "Reassure patient that no additional testing or treatment is indicated, and the patient can continue present management",
+   "models": [
+    "Grok",
+    "Muse",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Muse",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok"
+   ],
+   "items": [
+    "Heme010",
+    "Heme010",
+    "Heme010-0",
+    "Heme010-0",
+    "Heme010-1",
+    "Heme010-2",
+    "Heme010-4",
+    "Heme010-5",
+    "Heme010-6",
+    "Heme010-7",
+    "Heme010-8",
+    "Heme010-9"
+   ]
+  },
+  "B19": {
+   "case": "Endo002",
+   "option": "Hold Alendronate for any duration before and after the procedure",
+   "models": [
+    "Astra",
+    "Sonnet",
+    "Astra",
+    "Astra",
+    "Astra",
+    "Muse",
+    "Astra",
+    "Sonnet"
+   ],
+   "items": [
+    "Endo002",
+    "Endo002-0",
+    "Endo002-1",
+    "Endo002-2",
+    "Endo002-5",
+    "Endo002-6",
+    "Endo002-7",
+    "Endo002-8"
+   ]
+  },
+  "B20": {
+   "case": "ID006",
+   "option": "Urgent outpatient referral to specialist within 2 weeks, warning patient not to delay this referral",
+   "models": [
+    "Muse",
+    "Terra",
+    "Terra",
+    "Sonnet",
+    "Terra",
+    "Terra",
+    "Muse",
+    "Terra"
+   ],
+   "items": [
+    "ID006",
+    "ID006-1",
+    "ID006-2",
+    "ID006-4",
+    "ID006-4",
+    "ID006-6",
+    "ID006-7",
+    "ID006-8"
+   ]
+  },
+  "B21": {
+   "case": "Endo002",
+   "option": "Reassure patient that no additional testing or treatment is indicated, and the patient can continue present management",
+   "models": [
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok",
+    "Grok"
+   ],
+   "items": [
+    "Endo002-0",
+    "Endo002-1",
+    "Endo002-5",
+    "Endo002-6",
+    "Endo002-8"
+   ]
+  },
+  "B22": {
+   "case": "Endo009",
+   "option": "Start Sitagliptin 100 mg daily",
+   "models": [
+    "Grok",
+    "Grok",
+    "Astra",
+    "Grok",
+    "Astra"
+   ],
+   "items": [
+    "Endo009-0",
+    "Endo009-3",
+    "Endo009-4",
+    "Endo009-6",
+    "Endo009-9"
+   ]
+  },
+  "B23": {
+   "case": "Endo002",
+   "option": "Order panoramic dental X-ray",
+   "models": [
+    "Astra",
+    "Terra",
+    "Terra",
+    "Astra"
+   ],
+   "items": [
+    "Endo002-3",
+    "Endo002-4",
+    "Endo002-5",
+    "Endo002-9"
+   ]
+  },
+  "B24": {
+   "case": "Pulm009",
+   "option": "Order high-resolution CT chest",
+   "models": [
+    "Sonnet",
+    "Sonnet",
+    "Sonnet",
+    "Sonnet"
+   ],
+   "items": [
+    "Pulm009",
+    "Pulm009-0",
+    "Pulm009-4",
+    "Pulm009-5"
+   ]
+  },
+  "B25": {
+   "case": "Endo002",
+   "option": "Start Amoxicillin 500 mg PO TID starting 1 day before the procedure for 7 days",
+   "models": [
+    "Terra",
+    "Sonnet",
+    "Muse"
+   ],
+   "items": [
+    "Endo002-0",
+    "Endo002-3",
+    "Endo002-3"
+   ]
+  },
+  "B26": {
+   "case": "Pulm005",
+   "option": "Reassure patient that productive coughs following illness are self-limiting",
+   "models": [
+    "Muse",
+    "Grok",
+    "Muse"
+   ],
+   "items": [
+    "Pulm005-2",
+    "Pulm005-7",
+    "Pulm005-9"
+   ]
+  },
+  "B27": {
+   "case": "Derm006",
+   "option": "Order skin biopsy of a representative lesion",
+   "models": [
+    "Terra",
+    "Muse"
+   ],
+   "items": [
+    "Derm006-5",
+    "Derm006-5"
+   ]
+  },
+  "B28": {
+   "case": "GI004",
+   "option": "Order repeat CT angiography of the abdomen and pelvis",
+   "models": [
+    "Terra",
+    "Astra"
+   ],
+   "items": [
+    "GI004-5",
+    "GI004-5"
+   ]
+  },
+  "B29": {
+   "case": "Nephro005",
+   "option": "Order transesophageal echocardiogram",
+   "models": [
+    "Grok",
+    "Grok"
+   ],
+   "items": [
+    "Nephro005-5",
+    "Nephro005-8"
+   ]
+  },
+  "B30": {
+   "case": "All008",
+   "option": "Inform patient that the rash and kidney injury are two separate, unrelated issues",
+   "models": [
+    "Grok"
+   ],
+   "items": [
+    "All008-3"
+   ]
+  },
+  "B31": {
+   "case": "Card001",
+   "option": "Order exercise stress echocardiogram",
+   "models": [
+    "Grok"
+   ],
+   "items": [
+    "Card001-4"
+   ]
+  },
+  "B32": {
+   "case": "Card001",
+   "option": "Order pharmacologic nuclear stress test",
+   "models": [
+    "Grok"
+   ],
+   "items": [
+    "Card001-3"
+   ]
+  },
+  "B33": {
+   "case": "Endo007",
+   "option": "Reassure patient that erectile dysfunction is rarely related to prolactin levels",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "Endo007-5"
+   ]
+  },
+  "B34": {
+   "case": "Endo009",
+   "option": "Start Glipizide 5 mg daily",
+   "models": [
+    "Grok"
+   ],
+   "items": [
+    "Endo009-1"
+   ]
+  },
+  "B35": {
+   "case": "ID008",
+   "option": "Advise patient to ensure the course of amoxicillin is completed but not to take any extra doses",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "ID008-6"
+   ]
+  },
+  "B36": {
+   "case": "ID008",
+   "option": "Order C. difficile GDH antigen test",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "ID008-5"
+   ]
+  },
+  "B37": {
+   "case": "ID008",
+   "option": "Order C. difficile PCR/NAAT test",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "ID008-5"
+   ]
+  },
+  "B38": {
+   "case": "ID008",
+   "option": "Order C. difficile toxin EIA test",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "ID008-5"
+   ]
+  },
+  "B39": {
+   "case": "ID008",
+   "option": "Order complete blood count and comprehensive metabolic panel",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "ID008-5"
+   ]
+  },
+  "B40": {
+   "case": "Nephro005",
+   "option": "Start Aspirin 81 mg PO daily",
+   "models": [
+    "Sonnet"
+   ],
+   "items": [
+    "Nephro005-5"
+   ]
+  },
+  "B41": {
+   "case": "Pulm001",
+   "option": "Order repeat non-contrast CT chest in 1 year",
+   "models": [
+    "Muse"
+   ],
+   "items": [
+    "Pulm001-4"
+   ]
+  },
+  "B42": {
+   "case": "Pulm005",
+   "option": "Start Amoxicillin/Clavulanate 875 mg/125 mg PO twice daily for 7 days",
+   "models": [
+    "Sonnet"
+   ],
+   "items": [
+    "Pulm005-7"
+   ]
+  },
+  "B43": {
+   "case": "Pulm009",
+   "option": "Order chest X-ray",
+   "models": [
+    "Sonnet"
+   ],
+   "items": [
+    "Pulm009-5"
+   ]
+  }
+ }
+}

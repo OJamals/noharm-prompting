@@ -1,0 +1,694 @@
+{"id": "All006", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-0", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-0", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-3", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-5", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-7", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-8", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-1", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-1", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-2", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-2", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-3", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-4", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-4", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-5", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-6", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-6", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-7", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card002-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card005-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm001-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm006-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Derm009-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo002-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo007-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Endo009-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI002-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI004-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "GI007-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme002-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme004-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Heme010-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID003-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID006-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "ID008-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro003-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro005-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Nephro009-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro003-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro004-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Neuro007-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm001-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm005-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Pulm009-8", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All001-9", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All006-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009-9", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All008", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card005", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Card002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm006", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Derm009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Endo007", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI004", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "GI007", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme002", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme004", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Heme010", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID003", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID006", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "ID008", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro003", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Nephro005", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro003", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro004", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Neuro007", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm001", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm005", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "Pulm009", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All001-0", "trial": 1, "response": null, "error": "litellm.BadRequestError: OpenAIException - `temperature` is deprecated for this model.", "runtime": null, "usage": null}
+{"id": "All006-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "All008-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}
+{"id": "Card001-0", "trial": 1, "response": null, "error": "litellm.RateLimitError: RateLimitError: OpenAIException - Too many requests", "runtime": null, "usage": null}

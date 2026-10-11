@@ -1,0 +1,10 @@
+Data in this repository (model responses, evaluations, ratings, the physician review
+materials and the generated LaTeX numbers), except the NOHARM kit under
+sources/mast/benchmarks/donoharm/, is licensed under the Creative Commons Attribution 4.0
+International licence (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 Ahmad Omar Aljamal
+
+The NOHARM cases and rubrics that the responses answer and the evaluations score are
+Copyright (c) 2026 ARISE Network, CC BY 4.0; the NOHARM kit code is MIT. See
+sources/mast/benchmarks/donoharm/LICENSE and LICENSE-DATA.

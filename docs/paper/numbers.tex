@@ -1,0 +1,82 @@
+% Every number the papers quote, in one place. Each comes from a committed script; the comment
+% names it. Re-measure, update here, and both papers follow. Development evidence: NOHARM v2
+% open subset (30 cases x 11 variants = 330 items), local Claude Sonnet 5.5 judge, paired
+% case-cluster bootstrap (B = 10,000). Nothing here is the held-out leaderboard result.
+
+% --- Protocol (scripts/noharm_kit.py; docs/reference/noharm-results.md) -----------------------
+\newcommand{\nCases}{30}
+\newcommand{\nItems}{330}
+\newcommand{\judgeAgreeSonnet}{323/330}      % option verdicts vs the kit's Gemini-judged example
+\newcommand{\judgeAgreeTerra}{325/330}
+\newcommand{\judgeAgreeNemotron}{327/330}  % openrouter free, 2026-10-10
+\newcommand{\judgeAgreeLing}{326/330}      % openrouter free, 2026-10-10
+
+% --- Single models, bare case (noharm_kit.py score; F1_weighted [95% CI]) ----------------------
+\newcommand{\fSonnet}{0.764 [0.717, 0.808]}
+\newcommand{\fOpus}{0.752 [0.704, 0.798]}
+\newcommand{\fMuse}{0.756 [0.702, 0.808]}
+\newcommand{\fTerra}{0.678 [0.625, 0.730]}
+\newcommand{\fLuna}{0.671 [0.618, 0.722]}
+\newcommand{\fAstra}{0.629 [0.555, 0.700]}
+\newcommand{\fSol}{0.627 [0.552, 0.697]}
+\newcommand{\fGrok}{0.354 [0.277, 0.434]}
+\newcommand{\fGrokThorough}{0.633}
+
+% --- Prompting (noharm_system.py propose) ------------------------------------------------------
+\newcommand{\fPharmacist}{0.835 [0.790, 0.879]}
+\newcommand{\dPharmacist}{+0.072 [+0.028, +0.115]}  % vs bare Sonnet
+\newcommand{\recallBareToPharm}{0.732 $\rightarrow$ 0.868}
+\newcommand{\fTerraSpecialist}{0.853 [0.811, 0.893]}
+\newcommand{\dTerraSpecialist}{+0.175 [+0.108, +0.248]}  % vs terra bare
+\newcommand{\fAstraExhaustive}{0.819}
+\newcommand{\dAstraExhaustive}{+0.189 [+0.120, +0.264]}  % vs Astra bare
+\newcommand{\fPromptedUnion}{0.878 [0.838, 0.915]}  % as judged; 0.864 deduplicated
+\newcommand{\fPromptedUnionDedup}{0.864}
+\newcommand{\fMenuTerra}{0.808}
+\newcommand{\dMenuTerra}{+0.130 [+0.055, +0.204]}   % vs terra's plan
+\newcommand{\rhoActionsFone}{0.91}                  % Spearman, 13 configurations
+\newcommand{\rhoActionsPrec}{0.63}
+
+% --- System components (noharm_system.py concat|merge|gap; noharm_kit.py compare) -------------
+\newcommand{\fUnionEligible}{0.811 [0.767, 0.851]}
+\newcommand{\dUnionEligible}{+0.047 [+0.029, +0.066]}   % vs Sonnet
+\newcommand{\dUnionFree}{+0.094 [+0.043, +0.150]}       % free three vs Muse Spark
+\newcommand{\fMerge}{0.839 [0.789, 0.885]}
+\newcommand{\dMergeVsConcat}{$-$0.010 [$-$0.066, +0.037]}
+\newcommand{\fPipeline}{0.849 [0.809, 0.886]}
+\newcommand{\dCompletion}{+0.038 [+0.009, +0.070]}       % vs the union it extends
+\newcommand{\dCompletionDedup}{+0.037 [+0.010, +0.069]}
+\newcommand{\dPipelineVsSonnet}{+0.085 [+0.048, +0.122]}
+\newcommand{\severeUnionToPipeline}{0.158 $\rightarrow$ 0.109}
+\newcommand{\fWriterEligible}{0.822}
+\newcommand{\dWriterVsConcat}{+0.012 [$-$0.004, +0.028]}  % write-eligible3 vs concat3-eligible
+\newcommand{\dRetrievalOnCompletion}{+0.000 [$-$0.022, +0.020]}  % 10 case families
+
+% --- Ceilings (noharm_select_sim.py --oracle) ---------------------------------------------------
+\newcommand{\simUnionEligible}{0.818}
+\newcommand{\simOracleEligible}{0.842}
+\newcommand{\simFullMenuSelect}{0.882}
+\newcommand{\simOracleMenuUnion}{0.907}
+
+% --- Measurement --------------------------------------------------------------------------------
+\newcommand{\judgeFamilyBias}{+0.037 [+0.014, +0.060]}   % *-jterra arms
+\newcommand{\duplicateInflation}{+0.015}
+\newcommand{\sdNested}{0.053}
+\newcommand{\mdeNested}{0.027}
+
+% --- Paper B (noharm_blindspots.py; noharm_rater.py; noharm_label_eval.py) ----------------------
+\newcommand{\recallProposedSonnet}{0.696}
+\newcommand{\recallNeverSonnet}{0.985}
+\newcommand{\orProposedSonnet}{0.05 [0.02, 0.12]}
+\newcommand{\orPerArmSonnet}{0.26 [0.18, 0.38]}
+\newcommand{\orPerArmLuna}{0.39 [0.28, 0.54]}
+\newcommand{\orPerArmGrok}{0.35 [0.29, 0.43]}
+\newcommand{\orPerArmNemotron}{0.35 [0.26, 0.48]}
+\newcommand{\recallOpposite}{0.775}
+\newcommand{\recallFacts}{0.755}
+\newcommand{\labelProposedCaught}{11/49}
+\newcommand{\labelAddsToRater}{1/49}
+
+% --- Coverage paper ---------------------------------------------------------------------------
+% Its numbers are generated, not kept here: coverage-numbers.tex, written by
+% .venv/bin/python -m scripts.noharm_paper_snapshot --tex docs/paper/coverage-numbers.tex

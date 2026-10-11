@@ -1,0 +1,28 @@
+{
+  "reviewer": "internal-medicine physician on the study team",
+  "date": "2026-10-11",
+  "instrument": "https://claude.ai/artifact/GxSbLj3PNXwyKTJczJMzNK",
+  "key": "physician_review_key.json",
+  "statement": "all of the responses are appropriate",
+  "form": "one overall verdict covering every item of every part, not per-item 1-9 ratings",
+  "parts": {
+    "A": {
+      "question": "Is this unlisted plan action appropriate for this patient (RAND-UCLA 1-9)?",
+      "blinding": "model, instruction and AI-rater flag status hidden",
+      "verdict": "appropriate",
+      "inappropriate": []
+    },
+    "B": {
+      "question": "Is the rubric option the panel rated 1-3 harmful for this patient, as these plans stated it?",
+      "blinding": "model hidden; panel rating and the fact that the instruction added the option shown",
+      "verdict": "appropriate",
+      "harmful": []
+    },
+    "C": {
+      "question": "Is any instruction's wording clinically misleading?",
+      "instructions": ["specialist", "pharmacist", "pcp", "exhaustive", "menu", "framing", "format", "length", "kit thorough"],
+      "verdict": "no concern",
+      "concerns": []
+    }
+  }
+}
