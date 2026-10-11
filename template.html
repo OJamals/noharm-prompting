@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asking for the Whole Plan</title>
+<meta name="description" content="How an instruction moves language models' scores on NOHARM, a clinical-safety benchmark of real specialist consultations. Exploratory study on the public cases, with data and code.">
+<meta property="og:title" content="Asking for the Whole Plan: prompt design moves clinical-safety scores more than model choice">
+<meta property="og:description" content="One structured instruction raised severity-weighted F1 by 0.14 on average on the NOHARM v2 public cases, and halved the spread between models.">
+<meta property="og:url" content="{{SITE_URL}}">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #fbfaf7; --surface: #ffffff; --sunk: #f3f2ee;
+  --ink: #141413; --ink-2: #52514e; --muted: #77766f;
+  --rule: #e4e2dc; --grid: #ecebe6;
+  --bare: #eb6834; --instr: #2a78d6; --instr-soft: #cde2fb; --link: #1c5cab;
+  --good: #0ca30c;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121211; --surface: #1a1a19; --sunk: #222220;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #94938b;
+    --rule: #30302d; --grid: #262624;
+    --bare: #d95926; --instr: #3987e5; --instr-soft: #1c3a5e; --link: #86b6ef;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121211; --surface: #1a1a19; --sunk: #222220;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #94938b;
+  --rule: #30302d; --grid: #262624;
+  --bare: #d95926; --instr: #3987e5; --instr-soft: #1c3a5e; --link: #86b6ef;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.6 var(--sans); }
+a { color: var(--link); text-underline-offset: 2px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+header.top { border-bottom: 1px solid var(--rule); }
+.bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 12px; padding-bottom: 12px; font-size: 14px; color: var(--ink-2); }
+.bar nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.bar nav a { color: var(--ink-2); text-decoration: none; }
+.bar nav a:hover { color: var(--ink); }
+.theme { background: none; border: 1px solid var(--rule); color: var(--ink-2); border-radius: 6px; padding: 4px 10px; font: inherit; cursor: pointer; }
+.hero { padding-top: 56px; padding-bottom: 32px; }
+@media (max-width: 560px) { .bar nav a { display: none; } .hero { padding-top: 36px; } }
+.kicker { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font: 700 clamp(30px, 5vw, 46px)/1.12 var(--serif); margin: 12px 0 12px; letter-spacing: -.01em; max-width: 22ch; }
+.sub { font: 400 clamp(18px, 2.4vw, 21px)/1.45 var(--serif); color: var(--ink-2); max-width: 46ch; margin: 0 0 20px; }
+.byline { font-size: 15px; color: var(--ink-2); margin-bottom: 24px; }
+.byline strong { color: var(--ink); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--rule); color: var(--ink); background: var(--surface); }
+.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn:hover { border-color: var(--ink-2); }
+.note { margin-top: 20px; font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+section { padding: 40px 0; border-top: 1px solid var(--rule); }
+h2 { font: 700 clamp(23px, 3vw, 29px)/1.2 var(--serif); margin: 0 0 10px; }
+.lede { font: 400 18px/1.55 var(--serif); color: var(--ink-2); max-width: 66ch; margin: 0 0 24px; }
+p { max-width: 70ch; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 8px 0 0; }
+.tile { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; }
+.tile .v { font: 700 30px/1.15 var(--serif); letter-spacing: -.01em; }
+.tile .v small { font: 500 15px var(--sans); color: var(--muted); }
+.tile .k { margin-top: 6px; font-size: 14px; color: var(--ink-2); line-height: 1.45; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 18px 18px 14px; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.seg button { font: 500 13.5px var(--sans); border: 0; background: var(--surface); color: var(--ink-2); padding: 7px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13.5px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.chart { width: 100%; position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--sans); fill: var(--ink-2); font-size: 12px; }
+.chart .axis text { fill: var(--muted); font-size: 11.5px; }
+.chart .grid line { stroke: var(--grid); }
+.chart .lab { fill: var(--ink); font-size: 12.5px; }
+.chart .grp { fill: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.caption { font-size: 13.5px; color: var(--muted); margin: 10px 0 0; max-width: 80ch; }
+.tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.45; box-shadow: 0 6px 24px rgba(0,0,0,.14); max-width: 300px; opacity: 0; transition: opacity .08s; }
+.tip b { font-weight: 600; }
+.tip .row { display: flex; justify-content: space-between; gap: 14px; color: var(--ink-2); }
+.tip .row span:last-child { color: var(--ink); font-variant-numeric: tabular-nums; }
+.tip .hd { font-weight: 600; margin-bottom: 4px; }
+details.tbl { margin-top: 10px; font-size: 14px; }
+details.tbl summary { cursor: pointer; color: var(--ink-2); }
+.tw { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; margin-top: 8px; }
+th, td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-weight: 600; color: var(--ink-2); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+.prompt { position: relative; background: var(--sunk); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 16px 14px; margin: 12px 0; }
+.prompt h3 { font: 600 15px var(--sans); margin: 0 0 8px; }
+.prompt pre { margin: 0; white-space: pre-wrap; word-wrap: break-word; font: 400 13.5px/1.6 var(--mono); color: var(--ink); }
+.copy { position: absolute; top: 12px; right: 12px; font: 500 12.5px var(--sans); border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+ul.limits { padding-left: 20px; max-width: 72ch; }
+ul.limits li { margin: 6px 0; }
+footer { border-top: 1px solid var(--rule); padding: 32px 0 48px; color: var(--ink-2); font-size: 14px; }
+.cite pre { white-space: pre-wrap; word-wrap: break-word; font: 400 12.5px/1.55 var(--mono); }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; font-size: 14.5px; max-width: 70ch; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+@media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <span>NOHARM prompting study</span>
+    <nav>
+      <a href="#results">Results</a><a href="#parts">Parts</a><a href="#instruction">Instruction</a><a href="#safety">Safety</a><a href="#cite">Cite</a>
+      <button class="theme" id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div class="kicker">Preprint · October 2026</div>
+  <h1>Asking for the Whole Plan</h1>
+  <p class="sub">Prompt design moves language models' scores on a clinical-safety benchmark more than model choice. An exploratory study on the NOHARM v2 public cases.</p>
+  <div class="byline"><strong>Ahmad Omar Aljamal, MD</strong> · Independent researcher</div>
+  <div class="actions">
+    <a class="btn primary" id="paperlink" href="{{PDF_URL}}">Read the paper</a>
+    <a class="btn" href="{{REPO_URL}}">Data and code</a>
+    <a class="btn" href="#cite">Cite</a>
+  </div>
+  <p class="note">Public development data scored by a locally run AI evaluator. No organiser-scored held-out result and no clinical validation. The 30 public cases and their rubrics are by the NOHARM authors (ARISE Network, CC BY 4.0).</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>The finding</h2>
+    <p class="lede">NOHARM scores a model's management plan for a real primary-care-to-specialist consultation against specialists' ratings of every action the case calls for. Most severe errors are omissions. Asked for a complete, structured plan, terse models stop omitting, and the ranking between models largely changes with how they are asked.</p>
+    <div class="tiles" id="tiles"></div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <h2>Every model, asked two ways</h2>
+    <p class="lede">Twelve models answered the bare case; five also answered with an instruction. Hover a row for its numbers.</p>
+    <div class="card">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Metric" id="m1">
+          <button type="button" data-k="f1" aria-pressed="true">Headline F1</button>
+          <button type="button" data-k="f1all">Every stated action counted</button>
+        </div>
+        <div class="legend"><span><i class="sw" style="background:var(--bare)"></i>Bare case</span><span><i class="sw" style="background:var(--instr)"></i>With an instruction</span></div>
+      </div>
+      <div class="chart" id="c1" role="img" aria-label="Severity-weighted F1 for twelve models on the bare case, and for five of them with an instruction"></div>
+      <p class="caption" id="cap1"></p>
+      <details class="tbl"><summary>Show as a table</summary><div class="tw" id="t1"></div></details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>A fuller plan scores higher</h2>
+    <p class="lede" id="lede2"></p>
+    <div class="card">
+      <div class="controls">
+        <div class="legend"><span><i class="sw" style="background:var(--bare)"></i>Bare case</span><span><i class="sw" style="background:var(--instr)"></i>With an instruction</span><span>Arrow: same model, instructed</span></div>
+      </div>
+      <div class="chart" id="c2" role="img" aria-label="Median stated actions per plan against severity-weighted F1"></div>
+      <p class="caption">Horizontal axis: median number of actions the evaluator extracted per plan, on a log scale. Each arrow joins a model's bare case to its instructed arm.</p>
+    </div>
+  </div>
+</section>
+
+<section id="parts">
+  <div class="wrap">
+    <h2>Which part of the instruction carries the gain</h2>
+    <p class="lede">On Sonnet 5.5 and GPT-5.6 terra the instruction was taken apart: the consult framing alone, the plan format alone, and a bare request for 25 numbered recommendations that names no clinical content. Switch the metric to see why length alone falls short.</p>
+    <div class="card">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Metric" id="m3">
+          <button type="button" data-k="f1" aria-pressed="true">F1</button>
+          <button type="button" data-k="actions">Actions stated</button>
+          <button type="button" data-k="recall">Recall</button>
+        </div>
+      </div>
+      <div class="two"><div class="chart" id="c3a"></div><div class="chart" id="c3b"></div></div>
+      <p class="caption" id="cap3"></p>
+      <details class="tbl"><summary>Show as a table</summary><div class="tw" id="t3"></div></details>
+    </div>
+  </div>
+</section>
+
+<section id="instruction">
+  <div class="wrap">
+    <h2>The instruction</h2>
+    <p class="lede">Verbatim, as given to the models. The plan-format paragraph alone scored level with the full instruction. Paste a case where it says <code>{case}</code>.</p>
+    <div class="prompt"><h3>Plan format alone</h3><button class="copy" type="button" data-copy="format">Copy</button><pre id="p-format"></pre></div>
+    <div class="prompt"><h3>Full specialist instruction</h3><button class="copy" type="button" data-copy="full">Copy</button><pre id="p-full"></pre></div>
+    <p class="caption">Every instruction the study used, including the perspective variants and the kit's own 500-word prompt, is in the paper's Appendix A and in <a href="{{REPO_URL}}/blob/main/scripts/noharm_system.py">scripts/noharm_system.py</a>.</p>
+  </div>
+</section>
+
+<section id="safety">
+  <div class="wrap">
+    <h2>Did asking for more add harm?</h2>
+    <p class="lede" id="lede4"></p>
+    <div class="tiles" id="tiles4"></div>
+    <details class="tbl"><summary>Off-rubric actions by model</summary><div class="tw" id="t4"></div></details>
+    <p id="safetytext"></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What this does not show</h2>
+    <ul class="limits">
+      <li>Thirty base cases, not 330 independent consultations; instructions were developed on the same cases they were scored on.</li>
+      <li>Every score comes from an AI evaluator applying the benchmark's own scoring, not from the organisers and not from physicians. A second model family re-scored the key contrasts.</li>
+      <li>No organiser-scored held-out result: the leaderboard admits models, not prompts.</li>
+      <li>The physician review is one reviewer, the author, giving an overall verdict: blinded for the off-rubric actions only, and not an independent panel.</li>
+      <li>The design is incomplete: five of twelve models were instructed, with different instructions, and the instruction was taken apart on two models only.</li>
+      <li>Nothing here evaluates a plan acting without a clinician; it is not clinical validation.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer id="cite">
+  <div class="wrap">
+    <h2 style="font-size:22px">Cite</h2>
+    <div class="prompt cite"><button class="copy" type="button" data-copy="bib">Copy</button><pre id="bib"></pre></div>
+    <dl class="kv">
+      <dt>Paper</dt><dd><a id="paperlink2" href="{{PDF_URL}}">PDF</a></dd>
+      <dt>Data and code</dt><dd><a href="{{REPO_URL}}">{{REPO_URL}}</a> (code MIT, data CC BY 4.0)</dd>
+      <dt>Benchmark</dt><dd>NOHARM, ARISE Network: <a href="https://arxiv.org/abs/2512.01241">arXiv:2512.01241</a>, <a href="https://github.com/ARISENetwork/mast">github.com/ARISENetwork/mast</a></dd>
+      <dt>Numbers</dt><dd>Generated from the manuscript's own number files; none is typed by hand.</dd>
+    </dl>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+const DATA = /*DATA*/null;
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  const NS = "http://www.w3.org/2000/svg";
+  const f3 = (v) => v.toFixed(3);
+  const sg = (v) => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(3);
+  const ci = (a) => "[" + f3(a[0]) + ", " + f3(a[1]) + "]";
+  const dci = (d) => sg(d.mean) + " [" + sg(d.lo) + ", " + sg(d.hi) + "]";
+  const int = (v) => Number.isInteger(v) ? String(v) : v.toFixed(1);
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+  // theme: OS default, viewer override kept per browser
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("noharm-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  $("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("noharm-theme", root.dataset.theme); } catch (e) {}
+    drawAll();
+  });
+
+  if (DATA.links.preprint) { $("paperlink").href = DATA.links.preprint; $("paperlink2").href = DATA.links.preprint; $("paperlink").textContent = "Read the preprint"; $("paperlink2").textContent = "medRxiv preprint"; }
+
+  function el(tag, attrs, parent) {
+    const n = document.createElementNS(NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(parent, x, y, s, attrs) { const t = el("text", Object.assign({ x, y }, attrs || {}), parent); t.textContent = s; return t; }
+
+  // tooltip
+  const tip = $("tip");
+  function showTip(evt, html) {
+    tip.innerHTML = html; tip.style.opacity = "1";
+    const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = evt.clientX + pad, y = evt.clientY + pad;
+    if (x + w > innerWidth - 8) x = evt.clientX - w - pad;
+    if (y + h > innerHeight - 8) y = evt.clientY - h - pad;
+    tip.style.left = Math.max(8, x) + "px"; tip.style.top = Math.max(8, y) + "px";
+  }
+  function hideTip() { tip.style.opacity = "0"; }
+  const row = (k, v) => '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>";
+
+  // ---- tiles ----
+  const H = DATA.headline, terra = DATA.models[1], P = DATA.safety.physician;
+  const tiles = [
+    ["+" + H.meanGain.toFixed(2), "mean gain in severity-weighted F1 from one instruction, across five models [" + H.meanGainCI.map((v) => v.toFixed(2)).join(", ") + "]"],
+    [f3(terra.bare.f1) + " → " + f3(terra.instructed.f1), "GPT-5.6 terra, bare case to instructed (" + dci(terra.gain) + ")"],
+    [H.sdBare.toFixed(2) + " → " + H.sdSpec.toFixed(2), "spread between the five models (standard deviation): halved by asking"],
+    [P.inappropriate + " <small>of " + P.flagged + "</small>", "added actions a model rater flagged as harmful that a physician judged inappropriate"],
+  ];
+  $("tiles").innerHTML = tiles.map(([v, k]) => '<div class="tile"><div class="v">' + v + '</div><div class="k">' + k + "</div></div>").join("");
+
+  // ---- chart 1: dumbbell ----
+  let m1 = "f1";
+  function drawDumbbell() {
+    const box = $("c1"); box.innerHTML = "";
+    const W = Math.max(320, box.clientWidth), narrow = W < 560;
+    const labelW = narrow ? 118 : 150, right = narrow ? 52 : 64, rowH = 28, groupGap = 30, top = 26;
+    const inst = DATA.models.filter((m) => m.instructed).sort((a, b) => a.bare[m1] - b.bare[m1]).reverse();
+    const bare = DATA.models.filter((m) => !m.instructed).sort((a, b) => b.bare[m1] - a.bare[m1]);
+    const Hh = top + groupGap + (inst.length + bare.length) * rowH + 34;
+    const svg = el("svg", { viewBox: "0 0 " + W + " " + Hh, width: W, height: Hh }, box);
+    const vals = DATA.models.flatMap((m) => [m.bare[m1], m.instructed ? m.instructed[m1] : m.bare[m1]].concat(m1 === "f1" ? [m.bare.ci[0], m.instructed ? m.instructed.ci[1] : m.bare.ci[1]] : []));
+    const lo = Math.floor((Math.min(...vals) - 0.02) * 10) / 10, hi = Math.ceil((Math.max(...vals) + 0.02) * 10) / 10;
+    const x = (v) => labelW + (v - lo) / (hi - lo) * (W - labelW - right);
+    const g = el("g", { class: "grid" }, svg), ax = el("g", { class: "axis" }, svg);
+    let k = 0;
+    for (let t = lo; t <= hi + 1e-9; t += 0.1, k++) {
+      el("line", { x1: x(t), x2: x(t), y1: top - 6, y2: Hh - 28, "stroke-width": 1 }, g);
+      if (!narrow || k % 2 === 0) txt(ax, x(t), Hh - 10, t.toFixed(1), { "text-anchor": "middle" });
+    }
+    let y = top;
+    const groups = [["Given an instruction", inst], ["Bare case only", bare]];
+    for (const [title, list] of groups) {
+      txt(svg, 0, y + 4, title, { class: "grp" });
+      y += 18;
+      for (const m of list) {
+        const cy = y + rowH / 2;
+        const name = narrow ? m.name.replace("Claude ", "").replace("Muse Spark", "Muse") : m.name;
+        txt(svg, 0, cy + 4, name, { class: "lab" });
+        const b = m.bare[m1], it = m.instructed ? m.instructed[m1] : null;
+        if (it !== null) el("line", { x1: x(b), x2: x(it), y1: cy, y2: cy, stroke: css("--muted"), "stroke-width": 2, "stroke-opacity": 0.5 }, svg);
+        if (m1 === "f1") el("line", { x1: x(m.bare.ci[0]), x2: x(m.bare.ci[1]), y1: cy - 5, y2: cy - 5, stroke: css("--bare"), "stroke-width": 2, "stroke-linecap": "round", "stroke-opacity": 0.55 }, svg);
+        if (it !== null && m1 === "f1") el("line", { x1: x(m.instructed.ci[0]), x2: x(m.instructed.ci[1]), y1: cy + 5, y2: cy + 5, stroke: css("--instr"), "stroke-width": 2, "stroke-linecap": "round", "stroke-opacity": 0.55 }, svg);
+        el("circle", { cx: x(b), cy, r: 5.5, fill: css("--bare"), stroke: css("--surface"), "stroke-width": 2 }, svg);
+        if (it !== null) {
+          el("circle", { cx: x(it), cy, r: 5.5, fill: css("--instr"), stroke: css("--surface"), "stroke-width": 2 }, svg);
+          const gd = m1 === "f1" ? m.gain : m.gainAll;
+          txt(svg, W - right + 8, cy + 4, sg(gd.mean), { "font-size": 12, fill: css("--ink") });
+        }
+        const hit = el("rect", { x: 0, y: y, width: W, height: rowH, fill: "transparent" }, svg);
+        hit.addEventListener("mousemove", (e) => {
+          let h = '<div class="hd">' + m.name + "</div>" + row("Bare F1", f3(m.bare.f1) + " " + ci(m.bare.ci)) + row("F1, every action counted", f3(m.bare.f1all)) + row("Median actions", int(m.bare.actions));
+          if (m.instructed) h += '<div class="hd" style="margin-top:6px">Instruction: ' + m.instructed.instruction + "</div>" + row("F1", f3(m.instructed.f1) + " " + ci(m.instructed.ci)) + row("F1, every action counted", f3(m.instructed.f1all)) + row("Median actions", int(m.instructed.actions)) + row("Gain", dci(m.gain));
+          showTip(e, h);
+        });
+        hit.addEventListener("mouseleave", hideTip);
+        y += rowH;
+      }
+      y += groupGap - 18;
+    }
+    $("cap1").textContent = m1 === "f1"
+      ? "Severity-weighted F1 with 95% intervals that resample whole cases; the number at right is the instructed arm's paired gain. Instructions differ by model: specialist (Sonnet, terra), exhaustive (Astra), the kit's 500-word prompt (Grok, Muse)."
+      : "Precision recomputed over every stated action, so an action the rubric does not list counts as equivocal rather than ignored. The gains shrink but hold.";
+  }
+  function table1() {
+    let h = "<table><thead><tr><th>Model</th><th>Bare F1</th><th>95% CI</th><th>Actions</th><th>Instruction</th><th>F1</th><th>95% CI</th><th>Actions</th><th>Gain [95% CI]</th></tr></thead><tbody>";
+    for (const m of DATA.models) {
+      h += "<tr><td>" + m.name + "</td><td>" + f3(m.bare.f1) + "</td><td>" + ci(m.bare.ci) + "</td><td>" + int(m.bare.actions) + "</td>";
+      h += m.instructed ? "<td>" + m.instructed.instruction + "</td><td>" + f3(m.instructed.f1) + "</td><td>" + ci(m.instructed.ci) + "</td><td>" + int(m.instructed.actions) + "</td><td>" + dci(m.gain) + "</td>" : "<td></td><td></td><td></td><td></td><td></td>";
+      h += "</tr>";
+    }
+    $("t1").innerHTML = h + "</tbody></table>";
+  }
+
+  // ---- chart 2: length scatter ----
+  $("lede2").textContent = "Across all " + H.lengthArms + " single-call configurations the number of actions a plan stated tracked its score (Spearman " + H.lengthRho.toFixed(2) + " [" + H.lengthRhoCI.map((v) => v.toFixed(2)).join(", ") + "]). The number of stated actions accounted for " + H.adjShare + "% of the instruction's effect. Hover a point.";
+  function drawScatter() {
+    const box = $("c2"); box.innerHTML = "";
+    const W = Math.max(320, box.clientWidth), Hh = Math.round(Math.min(440, Math.max(300, W * 0.52)));
+    const narrow = W < 560, L = 44, R = narrow ? 78 : 18, T = 28, B = 40;
+    const svg = el("svg", { viewBox: "0 0 " + W + " " + Hh, width: W, height: Hh }, box);
+    const pts = [];
+    for (const m of DATA.models) {
+      pts.push({ m, kind: "bare", a: m.bare.actions, f: m.bare.f1 });
+      if (m.instructed) pts.push({ m, kind: "instr", a: m.instructed.actions, f: m.instructed.f1 });
+    }
+    const amin = 3, amax = 40, fmin = Math.floor((Math.min(...pts.map((p) => p.f)) - 0.03) * 10) / 10, fmax = Math.min(1, Math.ceil((Math.max(...pts.map((p) => p.f)) + 0.03) * 10) / 10);
+    const x = (a) => L + (Math.log(a) - Math.log(amin)) / (Math.log(amax) - Math.log(amin)) * (W - L - R);
+    const y = (f) => T + (fmax - f) / (fmax - fmin) * (Hh - T - B);
+    const g = el("g", { class: "grid" }, svg), ax = el("g", { class: "axis" }, svg);
+    for (const t of [4, 8, 16, 32]) { el("line", { x1: x(t), x2: x(t), y1: T, y2: Hh - B }, g); txt(ax, x(t), Hh - B + 18, String(t), { "text-anchor": "middle" }); }
+    for (let t = fmin; t <= fmax + 1e-9; t += 0.1) { el("line", { x1: L, x2: W - R, y1: y(t), y2: y(t) }, g); txt(ax, L - 8, y(t) + 4, t.toFixed(1), { "text-anchor": "end" }); }
+    txt(ax, (L + W - R) / 2, Hh - 4, "Median actions stated per plan (log scale)", { "text-anchor": "middle" });
+    txt(ax, L - 8, 12, "F1", { "text-anchor": "end" });
+    const defs = el("defs", {}, svg), mk = el("marker", { id: "ah", viewBox: "0 0 8 8", refX: 7, refY: 4, markerWidth: 7, markerHeight: 7, orient: "auto-start-reverse" }, defs);
+    el("path", { d: "M0,0 L8,4 L0,8 z", fill: css("--muted") }, mk);
+    for (const m of DATA.models.filter((m) => m.instructed)) {
+      const x1 = x(m.bare.actions), y1 = y(m.bare.f1), x2 = x(m.instructed.actions), y2 = y(m.instructed.f1);
+      const d = Math.hypot(x2 - x1, y2 - y1), sh = Math.min(9, d / 3);
+      el("line", { x1: x1 + (x2 - x1) * sh / d, y1: y1 + (y2 - y1) * sh / d, x2: x2 - (x2 - x1) * sh / d, y2: y2 - (y2 - y1) * sh / d, stroke: css("--muted"), "stroke-width": 1.5, "marker-end": "url(#ah)" }, svg);
+    }
+    pts.sort((a, b) => (a.kind === "bare" ? 0 : 1) - (b.kind === "bare" ? 0 : 1)); // instructed on top
+    for (const p of pts) {
+      const c = el("circle", { cx: x(p.a), cy: y(p.f), r: 6, fill: css(p.kind === "bare" ? "--bare" : "--instr"), stroke: css("--surface"), "stroke-width": 2 }, svg);
+      const hit = el("circle", { cx: x(p.a), cy: y(p.f), r: 13, fill: "transparent" }, svg);
+      hit.addEventListener("mousemove", (e) => showTip(e, '<div class="hd">' + p.m.name + "</div>" + row(p.kind === "bare" ? "Bare case" : "Instruction", p.kind === "bare" ? "" : p.m.instructed.instruction) + row("F1", f3(p.f)) + row("Median actions", int(p.a)) + row("Median characters", (p.kind === "bare" ? p.m.bare.chars : p.m.instructed.chars).toLocaleString("en"))));
+      hit.addEventListener("mouseleave", hideTip);
+      c.setAttribute("aria-hidden", "true");
+    }
+    // label placement chosen per point so no label sits on another mark
+    const place = { "Claude Sonnet 5.5": [9, -3, "start"], "GPT-6 Astra": [9, 11, "start"], "GPT-5.6 terra": narrow ? [-9, -6, "end"] : [9, 4, "start"], "Grok 4.7": [8, 19, "start"], "Muse Spark 1.3": [-9, -9, "end"] };
+    for (const m of DATA.models.filter((m) => m.instructed)) {
+      const short = m.name.replace("Claude ", "").replace(" 1.3", "");
+      const [dx, dy, anchor] = place[m.name] || [9, 4, "start"];
+      txt(svg, x(m.instructed.actions) + dx, y(m.instructed.f1) + dy, short, { "font-size": 11.5, fill: css("--ink"), "text-anchor": anchor });
+    }
+  }
+
+  // ---- chart 3: components ----
+  let m3 = "f1";
+  const MODEL3 = { Sonnet: "Claude Sonnet 5.5", Terra: "GPT-5.6 terra" };
+  function drawParts(boxId, key) {
+    const box = $(boxId); box.innerHTML = "";
+    const rows = DATA.components[key];
+    const W = Math.max(280, box.clientWidth), labelW = 118, right = 56, rowH = 34, T = 30, B = 28;
+    const Hh = T + rows.length * rowH + B;
+    const svg = el("svg", { viewBox: "0 0 " + W + " " + Hh, width: W, height: Hh, role: "img", "aria-label": MODEL3[key] + ": " + m3 + " by part of the instruction" }, box);
+    txt(svg, 0, 16, MODEL3[key], { class: "lab", "font-weight": 600 });
+    const all = Object.values(DATA.components).flat();
+    let lo, hi, ticks, fmt;
+    if (m3 === "actions") { lo = 0; hi = Math.ceil(Math.max(...all.map((r) => r.actions)) / 10) * 10; ticks = [0, 10, 20, 30].filter((t) => t <= hi); fmt = int; }
+    else { lo = 0.5; hi = 0.9; ticks = [0.5, 0.6, 0.7, 0.8, 0.9]; fmt = f3; }
+    const x = (v) => labelW + (Math.max(lo, v) - lo) / (hi - lo) * (W - labelW - right);
+    const g = el("g", { class: "grid" }, svg), ax = el("g", { class: "axis" }, svg);
+    for (const t of ticks) { el("line", { x1: x(t), x2: x(t), y1: T - 4, y2: Hh - B + 4 }, g); txt(ax, x(t), Hh - 8, m3 === "actions" ? String(t) : t.toFixed(1), { "text-anchor": "middle" }); }
+    const spec = rows[rows.length - 1];
+    rows.forEach((r, i) => {
+      const cy = T + i * rowH + rowH / 2, v = r[m3];
+      txt(svg, 0, cy + 4, r.label, { class: "lab", "font-size": 12 });
+      const w = Math.max(2, x(v) - x(lo)), h = 16;
+      el("path", { d: "M" + x(lo) + "," + (cy - h / 2) + " h" + Math.max(0, w - 4) + " a4,4 0 0 1 4,4 v" + (h - 8) + " a4,4 0 0 1 -4,4 h" + (-Math.max(0, w - 4)) + " z", fill: css(r.label === "Bare" ? "--bare" : "--instr"), "fill-opacity": r.label === "Bare" || r.label === "Format only" || r.label === "Full instruction" ? 1 : 0.55 }, svg);
+      if (m3 === "f1") el("line", { x1: x(r.ci[0]), x2: x(r.ci[1]), y1: cy, y2: cy, stroke: css("--ink"), "stroke-width": 1.5, "stroke-opacity": 0.6 }, svg);
+      txt(svg, Math.min(W - right + 6, x(m3 === "f1" ? Math.max(v, r.ci[1]) : v) + 6), cy + 4, fmt(v), { "font-size": 12, fill: css("--ink") });
+      const hit = el("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, fill: "transparent" }, svg);
+      hit.addEventListener("mousemove", (e) => {
+        let h = '<div class="hd">' + MODEL3[key] + " · " + r.label + "</div>" + row("F1", f3(r.f1) + " " + ci(r.ci)) + row("F1, every action counted", f3(r.f1all)) + row("Median actions", int(r.actions)) + row("Recall", f3(r.recall)) + row("Precision", f3(r.precision));
+        if (r.vsBare) h += row("vs bare", dci(r.vsBare));
+        if (r.vsSpec) h += row("vs full instruction", dci(r.vsSpec));
+        showTip(e, h);
+      });
+      hit.addEventListener("mouseleave", hideTip);
+    });
+  }
+  const capParts = {
+    f1: "The plan format alone scored level with the full instruction for both models; framing alone and length alone fell well short. Whiskers are 95% intervals.",
+    actions: "Asked only for 25 recommendations, both models stated as many actions as under the plan format, or more.",
+    recall: "Those extra actions were less often the indicated ones: recall under the length request stayed below the plan format's. Saying more is not enough; what the format names decides which actions are added.",
+  };
+  function table3() {
+    let h = "<table><thead><tr><th>Model</th><th>Part</th><th>F1</th><th>95% CI</th><th>F1 (all)</th><th>Actions</th><th>Recall</th><th>vs bare</th><th>vs full</th></tr></thead><tbody>";
+    for (const k of Object.keys(DATA.components)) for (const r of DATA.components[k]) {
+      h += "<tr><td>" + MODEL3[k] + "</td><td>" + r.label + "</td><td>" + f3(r.f1) + "</td><td>" + ci(r.ci) + "</td><td>" + f3(r.f1all) + "</td><td>" + int(r.actions) + "</td><td>" + f3(r.recall) + "</td><td>" + (r.vsBare ? dci(r.vsBare) : "") + "</td><td>" + (r.vsSpec ? dci(r.vsSpec) : "") + "</td></tr>";
+    }
+    $("t3").innerHTML = h + "</tbody></table>";
+  }
+
+  // ---- instruction text ----
+  $("p-format").textContent = DATA.instructions.format;
+  $("p-full").textContent = DATA.instructions.full;
+
+  // ---- safety ----
+  const S = DATA.safety, A = S.audit;
+  $("lede4").textContent = "A fuller plan states more actions the rubric does not list, and the benchmark scores those as neither help nor harm. Model raters screened them, and the author, an internal-medicine physician, read every one a rater flagged.";
+  const t4 = [
+    [int(A.Sonnet.actionsBare) + " → " + int(A.Sonnet.actionsPrompt), "unlisted actions per item in Sonnet's plans, bare to instructed (90-item sample)"],
+    [int(A.Sonnet.okPrompt) + "%", "of instructed Sonnet's unlisted actions a model rater put at 7–9 (appropriate); " + int(A.Terra.okPrompt) + "% for terra"],
+    [P.inappropriate + " <small>of " + P.actions + "</small>", "unlisted actions a physician judged inappropriate, including all " + P.flagged + " a model rater had flagged and " + P.controls + " unflagged controls"],
+    [P.harmful + " <small>of " + P.options + "</small>", "specialist-rated harmful options the instruction added that the physician found harmful as the plans stated them"],
+  ];
+  $("tiles4").innerHTML = t4.map(([v, k]) => '<div class="tile"><div class="v">' + v + '</div><div class="k">' + k + "</div></div>").join("");
+  const names = { Sonnet: "Claude Sonnet 5.5", Terra: "GPT-5.6 terra", Astra: "GPT-6 Astra", Grok: "Grok 4.7" };
+  let h4 = "<table><thead><tr><th>Model</th><th>Unlisted actions per item, bare</th><th>Instructed</th><th>Rated appropriate, bare</th><th>Instructed</th><th>Change in unlisted actions rated harmful</th></tr></thead><tbody>";
+  for (const k of Object.keys(A)) h4 += "<tr><td>" + names[k] + "</td><td>" + A[k].actionsBare.toFixed(2) + "</td><td>" + A[k].actionsPrompt.toFixed(2) + "</td><td>" + A[k].okBare + "%</td><td>" + A[k].okPrompt + "%</td><td>" + dci(A[k].harmDiff).replace(/\.(\d{2})\d/g, ".$1") + "</td></tr>";
+  $("t4").innerHTML = h4 + "</tbody></table>";
+  $("safetytext").innerHTML = "The cost the benchmark itself can see is small. Instructed Sonnet proposed " + sg(S.harm.Sonnet.diff.mean).slice(0, 5) + " more options the specialists rated harmful per item (" + S.harm.Sonnet.bare.toFixed(2) + " to " + S.harm.Sonnet.prompt.toFixed(2) + "), almost all mild or moderate; for terra, Astra and Grok the change was not distinguishable from zero. Read in the plans' own wording, the physician judged none of them harmful. The kit's strictest metric, which counts every unlisted action as wrong, reverses the gain for three models; the primary model rater's ratings and the physician's reading both say that metric is the wrong one here. A second model rater, Ling 3.1 Flash, found a small increase in harmful unlisted actions for Sonnet (" + dci(S.lingHarmDiffSonnet).replace(/\.(\d{2})\d/g, ".$1") + " per item); the physician found none.";
+
+  // ---- cite ----
+  const site = DATA.links.preprint || DATA.links.site;
+  $("bib").textContent = "@misc{aljamal2026wholeplan,\n  author       = {Aljamal, Ahmad Omar},\n  title        = {Asking for the Whole Plan: Prompt Design Moves Language Models' Scores on a Clinical-Safety Benchmark More Than Model Choice},\n  year         = {2026},\n  howpublished = {" + (DATA.links.preprint ? "medRxiv preprint" : "Preprint") + "},\n  url          = {" + site + "},\n  note         = {Data and code: " + DATA.links.repo + "}\n}";
+
+  document.querySelectorAll(".copy").forEach((b) => b.addEventListener("click", async () => {
+    const src = b.dataset.copy === "bib" ? $("bib") : $("p-" + b.dataset.copy);
+    try { await navigator.clipboard.writeText(src.textContent); b.textContent = "Copied"; }
+    catch (e) { const r = document.createRange(); r.selectNodeContents(src); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; }
+    setTimeout(() => (b.textContent = "Copy"), 1600);
+  }));
+
+  function seg(id, set) {
+    $(id).querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+      $(id).querySelectorAll("button").forEach((o) => o.setAttribute("aria-pressed", String(o === b)));
+      set(b.dataset.k);
+    }));
+  }
+  seg("m1", (k) => { m1 = k; drawDumbbell(); });
+  seg("m3", (k) => { m3 = k; drawParts("c3a", "Sonnet"); drawParts("c3b", "Terra"); $("cap3").textContent = capParts[m3]; });
+
+  function drawAll() { drawDumbbell(); drawScatter(); drawParts("c3a", "Sonnet"); drawParts("c3b", "Terra"); $("cap3").textContent = capParts[m3]; }
+  table1(); table3(); drawAll();
+  let pending = 0;
+  new ResizeObserver(() => { cancelAnimationFrame(pending); pending = requestAnimationFrame(drawAll); }).observe(document.querySelector("main"));
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);
+})();
+</script>
+</body>
+</html>
