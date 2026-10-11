@@ -18,6 +18,7 @@ a clinical validation.
 | `datasets/eval/noharm_review_packet/` | Physician review: the review page (`review_page.html`), its unblinding key, the reviewer's verdicts, and the clinician packet CSVs |
 | `scripts/` | Instructions (`noharm_system.py`), model and judge calls (`noharm_kit.py`), off-rubric audit, and the two offline generators that write every number in the paper |
 | `runs/` | The shell scripts that ran the generation and evaluation arms (provenance; they call model endpoints) |
+| `site/` | The project page (https://noharm.aljamal.work): `build.py` writes `index.html` from the manuscript's generated numbers |
 | `sources/mast/benchmarks/donoharm/` | The NOHARM open-subset kit as used (cases, rubrics, metric code), by the ARISE Network |
 
 Every instruction given to a model is reproduced verbatim in the paper's Appendix A and defined in
