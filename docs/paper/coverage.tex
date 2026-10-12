@@ -60,7 +60,10 @@ recovered actions were follow-up and counselling. Instructed Sonnet proposed \co
 more specialist-rated harmful options per item, mostly mild or moderate; a physician reading them in
 context judged none harmful, and judged none of the \covPhysFlagged{} unlisted actions that a model
 rater had flagged as harmful to be inappropriate. One instructed call scored level with a four-call system
-(\covDTerraSpecVsGap{}).
+(\covDTerraSpecVsGap{}). The best configuration, three instructed models combined, scored
+\covFUnionPrompt{} (\covFUnionPromptJT{} under a second evaluator), above the benchmark's published
+public-case reference scores (best 0.720), though under a different evaluator and not comparable to
+the leaderboard.
 \par\smallskip\noindent
 \textbf{Conclusions:} On this benchmark, how a model was asked changed its score more than which model
 was asked. Unprompted scores partly reflect how much a model writes by default, so prompted results
@@ -582,7 +585,9 @@ The benchmark publishes public-case reference scores, under its own evaluator, o
 0.674 for Claude Opus 4.7 and 0.664 for Gemini 3.1 Pro. The public leaderboard, scored by the
 organisers on held-out cases, is led by LiSA 2.5 at 86.2, followed by Doximity Ask 6.1 (84.5) and
 OpenEvidence (80.0); bare frontier models sit between about 56 and 75. Our scores use the public cases
-and a different evaluator, so none is a leaderboard number. NOHARM reports that public and held-out
+and a different evaluator, so none is a leaderboard number. Our best single call
+(\covFTerraSpec{}) and best combination (\covFUnionPrompt{}) are above the reference scores, but only
+a comparison under the same evaluator could show by how much. NOHARM reports that public and held-out
 scores correlate closely across models (Pearson 0.95) \citep{wu2025noharm}, which supports comparing
 ranks, not absolute values. Two further cautions apply to absolute values. Our second evaluator scored
 the instructed ensemble about 0.03 lower than the primary one, and the primary evaluator favoured an
