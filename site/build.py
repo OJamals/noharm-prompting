@@ -25,16 +25,17 @@ from scripts.noharm_system import ABLATIONS, PLAN_FORMAT, SPECIALIST  # noqa: E4
 SITE = ROOT / "site"
 PAPER = ROOT / "docs/paper"
 
-#: Filled in once the preprint is posted; until then the page links the PDF in the archive.
-PREPRINT_URL = ""
+#: The Preprints.org record; it resolves to the latest posted version.
+PREPRINT_URL = "https://www.preprints.org/manuscript/202610.1607"
 REPO_URL = "https://github.com/OJamals/noharm-prompting"
-PDF_URL = REPO_URL + "/raw/main/docs/paper/coverage.pdf"
+PDF_URL = REPO_URL + "/raw/main/docs/paper/whole-plan-v2.pdf"
+APPENDIX_URL = REPO_URL + "/raw/main/docs/paper/whole-plan-v2-supplementary-appendix.pdf"
 SITE_URL = "https://noharm.aljamal.work"
 
 #: (display name, bare arm alias, instructed arm alias, instruction label, gain macro)
 MODELS: tuple[tuple[str, str, str | None, str, str | None], ...] = (
     ("Claude Sonnet 5.5", "SonnetBare", "SonnetSpec", "specialist", "DPromptSonnet"),
-    ("GPT-5.6 terra", "TerraBare", "TerraSpec", "specialist", "DPromptTerra"),
+    ("GPT-5.6 Terra", "TerraBare", "TerraSpec", "specialist", "DPromptTerra"),
     ("GPT-6 Astra", "AstraBare", "AstraExh", "exhaustive", "DPromptAstraExh"),
     ("Grok 4.7", "GrokBare", "GrokThorough", "kit, 500 words", "DPromptGrokThorough"),
     ("Muse Spark 1.3", "MuseBare", "MuseThorough", "kit, 500 words", "DPromptMuseThorough"),
@@ -185,9 +186,22 @@ def data() -> dict[str, Any]:
                 "flagged": num("PhysFlagged"),
                 "controls": num("PhysControls"),
                 "inappropriate": num("PhysInappropriate"),
+                "inappropriateBare": num("PhysInappropriateBare"),
+                "inappropriatePrompt": num("PhysInappropriatePrompt"),
+                "controlsInappropriate": num("PhysControlsInappropriate"),
+                "equivocal": num("PhysEquivocal"),
+                "appropriate": num("PhysAppropriate"),
                 "options": num("PhysOptions"),
                 "statements": num("PhysStatements"),
+                "hedged": num("PhysHedged"),
                 "harmful": num("PhysHarmful"),
+                "optionEquivocal": num("PhysOptionEquivocal"),
+                "optionNot": num("PhysOptionNot"),
+                "harmfulStatements": num("PhysHarmfulStatements"),
+                "harmfulStatementsBy": {
+                    m: num(f"PhysHarmfulStatements{m}")
+                    for m in ("Sonnet", "Terra", "Astra", "Grok", "Muse")
+                },
                 "instructions": num("PhysInstructions"),
                 "concerns": num("PhysConcerns"),
             },
@@ -199,6 +213,7 @@ def data() -> dict[str, Any]:
         "links": {
             "preprint": PREPRINT_URL,
             "pdf": PDF_URL,
+            "appendix": APPENDIX_URL,
             "repo": REPO_URL,
             "site": SITE_URL,
         },
@@ -209,7 +224,13 @@ def main() -> None:
     payload = json.dumps(data(), ensure_ascii=False, indent=1).replace("</", "<\\/")
     template = (SITE / "template.html").read_text(encoding="utf-8")
     page = template.replace("/*DATA*/null", payload)
-    for key, value in (("PDF_URL", PDF_URL), ("REPO_URL", REPO_URL), ("SITE_URL", SITE_URL)):
+    for key, value in (
+        ("PDF_URL", PDF_URL),
+        ("APPENDIX_URL", APPENDIX_URL),
+        ("PREPRINT_URL", PREPRINT_URL),
+        ("REPO_URL", REPO_URL),
+        ("SITE_URL", SITE_URL),
+    ):
         page = page.replace("{{" + key + "}}", html.escape(value))
     (SITE / "index.html").write_text(page, encoding="utf-8")
     print(f"wrote {SITE / 'index.html'} ({len(page):,} bytes)")

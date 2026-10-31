@@ -1,0 +1,481 @@
+% Version 2 of the manuscript, as posted to Preprints.org (manuscript 202610.1607). Every number
+% is a macro from coverage-numbers.tex and coverage-analyses.tex.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\input{numbers}
+\input{coverage-numbers}
+\input{coverage-analyses}
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Asking for the Whole Plan: Prompt Design Moves Language Models' Scores on a
+Clinical-Safety Benchmark More Than Model Choice\par}
+\vspace{6pt}
+{\large An exploratory study on the NOHARM v2 public cases\par}
+\vspace{12pt}
+Ahmad Omar Aljamal, MD\\
+Independent researcher, United States\\
+ORCID 0000-0003-1630-1468 \quad Correspondence: \texttt{omar@aljamal.work}
+\end{center}
+
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\small\textbf{Version 2.} This
+version replaces version 1 (posted October 16, 2026). The physician review was repeated item by
+item; its results replace the overall verdict reported in version 1, which found no added option
+harmful (see \emph{Safety of the added content}). The text is condensed, with secondary analyses in
+the Supplementary Appendix, and spelling is American. No model output, AI evaluation or benchmark
+score changed.}}
+\medskip
+
+\onehalfspacing
+
+% ---------------------------------------------------------------------------------------------
+\section*{Abstract}
+\noindent\textbf{Objective:} To measure how much a structured instruction changes large language
+models' scores on NOHARM, a specialist-consultation benchmark graded mainly on omissions, which part
+of the instruction carries the change, and whether the added content is safe.
+
+\noindent\textbf{Materials and Methods:} Twelve models answered the \nCases{} public NOHARM v2
+cases (\nItems{} items) uninstructed, and 5 also with an instruction requesting a complete,
+structured plan. An AI evaluator applied the benchmark's severity-weighted F1. On 2
+models, each part of the instruction was tested alone and against a request for 25
+recommendations. Model raters and a physician reviewed the added actions.
+
+\noindent\textbf{Results:} The instruction raised F1 by \covPaperGridMeanGain{} on average
+\covPaperGridMeanGainCI{} and improved 4 of 5 models, most for the tersest (Grok 4.7,
+\covFGrokBare{} to \covFGrokThorough{}; GPT-5.6 Terra, \covFTerraBare{} to \covFTerraSpec{}). Three
+instructed models exceeded the best uninstructed score (\covFSonnetBare{}). The standard deviation between models halved (\covPaperGridSdBare{} to
+\covPaperGridSdSpec{}). The plan format alone matched the full instruction; the framing alone or 25
+recommendations scored lower. Most recovered actions were
+follow-up and counseling. One model proposed \covHarmSonnetDiff{} more specialist-rated harmful
+options per item;
+a physician judged \covPhysHarmful{} of the \covPhysOptions{} added options harmful as stated.
+
+\noindent\textbf{Discussion:} On this benchmark, an uninstructed score reflects how much a model
+volunteers, not only what it knows. A structured instruction recovered omitted care but added some harmful options.
+
+\noindent\textbf{Conclusion:} Benchmarks of clinical completeness should report scores under a
+standard structured instruction beside uninstructed scores, and check what the instruction adds,
+before models or clinical tools are ranked.
+
+\noindent\textbf{Keywords:} large language models; decision support systems, clinical;
+patient safety; benchmarking; referral and consultation
+
+% ---------------------------------------------------------------------------------------------
+\section*{Background and Significance}
+\label{sec:intro}
+\label{sec:related}
+NOHARM is a benchmark of the safety of language-model recommendations in specialist
+consultation.\citep{wu2025noharm} It compares a model's management plan for a real
+primary-care-to-specialist electronic consultation with specialists' ratings of the actions the
+case calls for and those it should avoid, and weights each error by the harm it could cause. In its
+evaluation, most severe errors were omissions, and recall trailed precision for nearly every model.
+The public leaderboard scores each model on the bare case, without an instruction.
+
+How a model is prompted is known to affect its benchmark
+scores.\citep{nori2023medprompt,ceballos2024open,sclar2024quantifying,mizrahi2024state,polo2024efficient}
+NOHARM's authors found that priming prompts asking for completeness, capped at 200 or 500 words,
+improved the scores of generalist models, although clinical retrieval tools remained
+ahead.\citep{wu2025noharm} If coverage depends on how a model is asked, a bare score reflects how
+much a model volunteers as well as what it knows, and a ranking built on bare scores could mislead
+anyone choosing a model or a tool. However, a gain from a longer answer is difficult to interpret.
+AI evaluators favor longer and self-generated
+text,\citep{zheng2023judging,saito2023verbosity,dubois2024length,panickssery2024recognize,wataoka2024selfpreference}
+although a length-matched analysis on HealthBench found this effect to be
+partial,\citep{arora2025healthbench} and evaluators, like models, detect missing content
+poorly.\citep{fox2026omission,absencebench2025} A gain from an instruction must therefore be
+separated from a gain from length, and the content it adds must be checked for harm that the
+rubric cannot detect.
+
+\section*{Objective}
+We sought to evaluate how much a structured instruction changes language models' scores on
+NOHARM's public cases, and whether the change depends on how much a model writes unprompted. We
+also sought to determine which part of the instruction carries the change and whether it is more
+than added length, and to assess whether the added actions are safe. This is an exploratory study
+on public cases scored by a locally run AI evaluator. It produces no leaderboard score and does not
+establish clinical safety.
+
+% ---------------------------------------------------------------------------------------------
+\section*{Materials and Methods}
+\subsection*{Benchmark}
+\label{sec:benchmark}
+NOHARM's cases come from real primary-care-to-specialist electronic consultations at one academic
+medical center.\citep{wu2025noharm} The public subset, released under CC BY 4.0, has \nCases{} base
+cases, three from each of ten specialties. Each appears in its original form and in ten versions
+that change one detail (such as age, sex, a comorbidity, a medication or a laboratory value),
+giving \nItems{} related items. Each case has a rubric of candidate actions rated by specialists on
+a 1--9 appropriateness scale: \covRubricOptions{} options in all, of which \covRubricHarmful{} are
+rated harmful (1--3; \covRubricSevere{} at 1) and \covRubricAppropriate{} appropriate (7--9;
+\covRubricEssential{} at 9). We ran the NOHARM v2 kit unchanged except for the evaluator model
+(Supplementary Section~S4). The organizers' held-out cases were not used.
+
+\subsection*{Models and instructions}
+\label{sec:models}
+\label{sec:prompts}
+Twelve models answered the bare case (Table~\ref{tab:grid}), and five of them also answered with an
+instruction. Freely available models may retain their inputs, so they were given public cases
+only. The \emph{bare} condition sends only the case text, as the leaderboard does. The
+\emph{specialist} instruction has two parts. Its \emph{consult framing} tells the model that a
+primary-care colleague has asked a specialist for the best recommendations, not only an answer to
+the literal question. Its \emph{plan format} asks for a one- or two-sentence assessment followed by
+numbered, specific recommendations (tests, drugs with doses and durations, referral specialty and
+urgency, conditional next steps, counseling and return precautions), leaving out nothing a careful
+specialist would want and including nothing unsafe. Neither part names a rubric option or sets a
+length.
+
+To determine which part matters, we gave Claude Sonnet 5.5 and GPT-5.6 Terra each part alone and,
+as a length control, a request for at least 25 numbered recommendations that named no clinical
+content, which drew about as many actions as the specialist instruction. Two further instructions
+were used on one or two models each: a variant with eight named plan headings (\emph{exhaustive}),
+and NOHARM's own priming prompt with its 500-word cap (\emph{kit}). All instructions are given in
+full in Supplementary Table~S1 and Section~S3. They were
+written from the benchmark's published description of a good answer and not tuned to any case, but
+they were written and tried on these same public cases. Every completed arm is reported; arms
+stopped before completion were not analyzed.
+
+\subsection*{Evaluation and outcomes}
+\label{sec:evaluation}
+\label{sec:outcomes}
+The kit's evaluator extracts the actions a plan states, matches each to the rubric, and reviews the
+matches. Claude Sonnet 5.5 was the primary evaluator; GPT-5.6 Terra and Nemotron 3 Ultra, a free
+model that wrote none of the plans, re-scored selected arms (Supplementary
+Section~S1.3). The primary outcome was the kit's severity-weighted F1. Precision
+is the severity-weighted appropriateness of stated actions that match a rubric option, and recall
+is the severity-weighted share of appropriate options covered. We also report the share of items
+with at least one potentially severe error, which is a benchmark judgment rather than an
+adverse-event rate.
+
+\subsection*{Checks on the added content}
+\label{sec:safety-methods}
+An action that matches no rubric option is never counted as harmful, and longer plans state more of
+these actions. We therefore recomputed F1 over all stated actions and recorded each plan's
+off-rubric share and length. Two model raters from other families rated every unlisted action on
+the specialists' 1--9 scale on a fixed 90-item sample per arm, as a screen rather than a harm rate.
+The author, an internal-medicine physician, then reviewed three sets of items (Supplementary
+Section~S1.4): the unlisted actions the screens flagged, mixed with unflagged
+controls and blinded to model, instruction and flag (Part~A); every option the specialists rated
+harmful that an instruction added to a model's plan, with the plan's own wording (Part~B); and the
+instructions themselves (Part~C). Every item was answered separately: a 1--9 score for each Part~A
+action, a verdict of harmful, equivocal or not harmful for each Part~B option as the plans stated it,
+and a concern or none for each instruction. This item-by-item review replaces an overall verdict
+reported in the first version of the preprint.
+
+\subsection*{Statistics}
+\label{sec:statistics}
+Item scores were averaged within each base case, and the \nCases{} case means were averaged with
+equal weight. Every comparison is paired by case, with percentile 95\% intervals from 10,000
+resamples of whole cases (seed 7); cross-model statistics were recomputed on each resample. Nothing
+was preregistered, and intervals are not adjusted for multiple comparisons except where Holm
+adjustment is stated. With \nCases{} cases, the smallest F1 gain detectable at 80\% power was
+\covMdeSonnet{} for Sonnet 5.5 and \covMdeTerra{} for Terra.
+
+\subsection*{Use of AI tools}
+Claude Code and Codex assisted with experiment code, analysis, drafting and building the physician
+review page; the review verdicts are the author's own. The author directed the study, checked every analysis and statement, and takes responsibility for the manuscript.
+
+% ---------------------------------------------------------------------------------------------
+\section*{Results}
+\subsection*{The instruction improved four of five models, most for the tersest}
+\label{sec:grid}
+\label{sec:spread}
+On the bare case, F1 ranged from \covFGrokBare{} (Grok 4.7) to \covFSonnetBare{} (Claude Sonnet
+5.5) across the twelve models, and models stated a median of \covAGrokBare{} to \covAMuseBare{}
+actions per plan (Table~\ref{tab:grid}). With an instruction, four of five models scored higher
+(Figure~\ref{fig:gains}A), each with a Holm-adjusted bootstrap $p$ below 0.001: Grok 4.7 by
+\covDPromptGrokThorough{}, GPT-6 Astra by \covDPromptAstraExh{}, GPT-5.6 Terra by
+\covDPromptTerra{} and Claude Sonnet 5.5 by \covDPromptSonnet{}. Muse Spark 1.3 was unchanged
+(\covDPromptMuseThorough{}). On average, F1 rose by \covPaperGridMeanGain{}
+\covPaperGridMeanGainCI{}. The less a model wrote unprompted, the more it gained (Spearman
+\covPaperGridRhoGainActions{} \covPaperGridRhoGainActionsCI{}). Furthermore, three instructed
+models (Terra, Sonnet 5.5 and Astra) scored above the highest bare score of any of the twelve
+models.
+
+The gain came from recall. Terra's recall rose from \covRTerraBare{} to \covRTerraSpec{}, while
+its precision changed from \covPTerraBare{} to \covPTerraSpec{}. The share of items with a
+potentially severe error also fell under the specialist instruction (Sonnet 5.5, \covSSonnetBare{}
+to \covSSonnetSpec{}; Terra, \covSTerraBare{} to \covSTerraSpec{}). Instructing the five models
+halved the spread between them: the standard deviation of their scores fell from
+\covPaperGridSdBare{} to \covPaperGridSdSpec{} (reduction \covPaperGridSdReduction{}
+\covPaperGridSdReductionCI{}). Across all \covLengthArms{} single-call configurations, the number of
+actions a plan stated tracked its F1 (Spearman \covLengthRho{} \covLengthRhoCI{};
+Figure~\ref{fig:length}).
+
+\begin{table}[htbp]
+\centering\small
+\caption{Bare case and instructed arms, primary evaluator. F1 is severity-weighted; actions are the
+median number the evaluator extracted per plan; differences are paired by case with 95\% intervals.
+Grok 4.7 and Muse Spark 1.3 received NOHARM's own priming prompt, capped at 500 words; Sonnet 5.5
+and Terra the specialist instruction; Astra its exhaustive variant. Models without an instructed
+arm were scored bare only.}
+\label{tab:grid}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrlrrl}
+\toprule
+Model & Bare F1 & Actions & Instruction & F1 & Actions & Difference [95\% CI]\\
+\midrule
+Claude Sonnet 5.5 & \covFSonnetBare & \covASonnetBare & specialist & \covFSonnetSpec & \covASonnetSpec & \covDPromptSonnet\\
+GPT-5.6 Terra & \covFTerraBare & \covATerraBare & specialist & \covFTerraSpec & \covATerraSpec & \covDPromptTerra\\
+GPT-6 Astra & \covFAstraBare & \covAAstraBare & exhaustive & \covFAstraExh & \covAAstraExh & \covDPromptAstraExh\\
+Grok 4.7 & \covFGrokBare & \covAGrokBare & kit, 500 words & \covFGrokThorough & \covAGrokThorough & \covDPromptGrokThorough\\
+Muse Spark 1.3 & \covFMuseBare & \covAMuseBare & kit, 500 words & \covFMuseThorough & \covAMuseThorough & \covDPromptMuseThorough\\
+\midrule
+Claude Opus 5.5 & \covFOpusBare & \covAOpusBare & & & & \\
+Claude Sonnet 5 & \covFSonnetOldBare & \covASonnetOldBare & & & & \\
+Claude Haiku 4.5 & \covFHaikuBare & \covAHaikuBare & & & & \\
+GPT-5.6 Luna & \covFLunaBare & \covALunaBare & & & & \\
+GPT-6.1 Sol & \covFSolBare & \covASolBare & & & & \\
+Nemotron 3 Ultra & \covFNemotronBare & \covANemotronBare & & & & \\
+Big Pickle & \covFPickleBare & \covAPickleBare & & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{jamia/fig-gains.pdf}
+\caption{What the instruction changed and which part changed it. (A) Instructed minus bare-case F1
+for each instructed model, ordered by how many actions the model stated unprompted. (B) For Sonnet
+5.5 and Terra, the score of one part of the specialist instruction alone minus the full
+instruction; a difference near zero means that part reproduces the whole gain. Filled markers:
+interval excludes zero.}
+\label{fig:gains}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.72\linewidth]{figures/fig-length-f1.pdf}
+\caption{Median actions stated per plan against severity-weighted F1. Orange: the twelve models on
+the bare case; blue: the five instructed arms, each joined to its bare case by an arrow.}
+\label{fig:length}
+\end{figure}
+
+\subsection*{The plan format carried the gain, not length}
+\label{sec:components}
+When the instruction was taken apart (Table~\ref{tab:components}, Figure~\ref{fig:gains}B), the
+plan format alone scored level with the full instruction for both models
+(\covDSonnetFormatVsSpec{} for Sonnet 5.5, \covDTerraFormatVsSpec{} for Terra). The consult framing
+alone fell short of it (\covDSonnetFramingVsSpec{} and \covDTerraFramingVsSpec{}). The request for
+25 recommendations drew as many actions as the plan format but covered fewer indicated ones (recall
+\covRSonnetLength{} against \covRSonnetFormat{} for Sonnet 5.5; \covRTerraLength{} against
+\covRTerraFormat{} for Terra), and it scored below the full instruction (\covDSonnetLengthVsSpec{}
+and \covDTerraLengthVsSpec{}).
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{The specialist instruction taken apart, primary evaluator. F1 (all) counts every stated
+action in precision, including those matching no rubric option; actions and characters are medians
+per plan; differences are paired by case with 95\% intervals.}
+\label{tab:components}
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{llrrrrll}
+\toprule
+Model & Instruction & F1 & F1 (all) & Actions & Characters & vs bare & vs specialist\\
+\midrule
+Sonnet 5.5 & bare & \covFSonnetBare & \covFAllSonnetBare & \covASonnetBare & \covCharsSonnetBare & & \\
+ & framing only & \covFSonnetFraming & \covFAllSonnetFraming & \covASonnetFraming & \covCharsSonnetFraming & \covDSonnetFramingVsBare & \covDSonnetFramingVsSpec\\
+ & format only & \covFSonnetFormat & \covFAllSonnetFormat & \covASonnetFormat & \covCharsSonnetFormat & \covDSonnetFormatVsBare & \covDSonnetFormatVsSpec\\
+ & 25 recommendations & \covFSonnetLength & \covFAllSonnetLength & \covASonnetLength & \covCharsSonnetLength & \covDSonnetLengthVsBare & \covDSonnetLengthVsSpec\\
+ & specialist & \covFSonnetSpec & \covFAllSonnetSpec & \covASonnetSpec & \covCharsSonnetSpec & \covDPromptSonnet & \\
+\midrule
+GPT-5.6 Terra & bare & \covFTerraBare & \covFAllTerraBare & \covATerraBare & \covCharsTerraBare & & \\
+ & framing only & \covFTerraFraming & \covFAllTerraFraming & \covATerraFraming & \covCharsTerraFraming & \covDTerraFramingVsBare & \covDTerraFramingVsSpec\\
+ & format only & \covFTerraFormat & \covFAllTerraFormat & \covATerraFormat & \covCharsTerraFormat & \covDTerraFormatVsBare & \covDTerraFormatVsSpec\\
+ & 25 recommendations & \covFTerraLength & \covFAllTerraLength & \covATerraLength & \covCharsTerraLength & \covDTerraLengthVsBare & \covDTerraLengthVsSpec\\
+ & specialist & \covFTerraSpec & \covFAllTerraSpec & \covATerraSpec & \covCharsTerraSpec & \covDPromptTerra & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{The instruction recovered follow-up and counseling}
+\label{sec:mechanism}
+\label{sec:length}
+The recovered actions were those that models leave out unprompted (Table~\ref{tab:categories}).
+Follow-up was the largest gap: coverage of appropriate follow-up options rose by
+\covCovFollowSonnetDiff{} for Sonnet 5.5 and \covCovFollowTerraDiff{} for Terra, followed by
+counseling (\covCovCounsSonnetDiff{} and \covCovCounsTerraDiff{}). These are the categories that
+NOHARM reports models and physicians alike omit.\citep{wu2025noharm} In a regression of item F1 on
+the instruction with model and case fixed effects (\covAdjRows{} item scores), the instruction's
+effect of \covAdjTotal{} fell to \covAdjDirect{} once the logarithm of the number of stated actions
+was added; the action count accounted for \covAdjShare\% \covAdjShareCI{} of the effect. The
+instruction therefore works largely by making models state more actions, but which actions depends
+on what it asks for, since the request for 25 recommendations reached the same count and scored
+lower.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Share of the specialists' appropriate options (rated 7--9) covered, bare $\to$
+instructed, by rubric category, primary evaluator; and options the specialists rated harmful (1--3)
+that the plans proposed, per item. Procedure (4 appropriate options) is counted in ``all'';
+contingency (one option) is not reported.}
+\label{tab:categories}
+\setlength{\tabcolsep}{3pt}
+\input{coverage-category-table}
+\end{table}
+
+\subsection*{Safety of the added content}
+\label{sec:safety}
+Actions matching no rubric option, which the headline precision ignores, made up
+\covOffSonnetBare\% of Sonnet 5.5's bare plans and \covOffSonnetSpec\% of its instructed ones. When
+every stated action was counted in precision, each gain was smaller but persisted (Terra
+\covDAllPromptTerra{}, Sonnet 5.5 \covDAllPromptSonnet{}). The kit's strictest variant, which counts
+every unlisted action as inappropriate, reversed the gain for three models (Supplementary
+Section~S2.4). Model raters found few harmful unlisted actions in any arm. Nemotron 3
+Ultra found no increase under any instruction, whereas Ling 3.1 Flash, which agreed with it only
+modestly (Cohen's $\kappa$ \covAuditKappaSonnet{}), rated \covAuditHarmDiffSonnetLing{} more of
+instructed Sonnet's unlisted actions per item harmful. The physician rated \covPhysInappropriate{}
+of the \covPhysActions{} Part~A actions harmful, \covPhysEquivocal{} equivocal and
+\covPhysAppropriate{} appropriate. All \covPhysInappropriate{} harmful ratings, \covPhysInappropriateBare{} for actions
+from bare plans and \covPhysInappropriatePrompt{} for actions from instructed ones, fell among the
+\covPhysFlagged{} actions that a model rater had flagged; none fell among the \covPhysControls{}
+unflagged controls.
+
+Against the specialists' own ratings, instructed Sonnet 5.5 proposed \covHarmSonnetPrompt{}
+harmful-rated options per item against \covHarmSonnetBare{} bare (\covHarmSonnetDiff{}), nearly all
+rated mildly or moderately harmful. For Terra, Astra, Grok and Muse Spark the change was not
+distinguishable from zero (Table~\ref{tab:categories}). These ratings judge each option for the case
+in general. Read in the plans' own wording, the physician judged \covPhysHarmful{} of the
+\covPhysOptions{} options that an instruction added harmful, \covPhysOptionEquivocal{} equivocal and
+\covPhysOptionNot{} not harmful. Most plan statements of these options were conditional or offered
+as alternatives (\covPhysHedged{} of \covPhysStatements{}). Statements of the options judged
+harmful came mainly from the two models given NOHARM's capped prompt. The physician raised no concern with the specialist instruction
+or either of its parts, but did with the 25-recommendation minimum, the candidate menu, and an
+example in NOHARM's own prompt (Supplementary Section~S2.4).
+
+\subsection*{Evaluator checks}
+\label{sec:robust-main}
+Re-scored by Nemotron 3 Ultra, a third model family, Terra's gain was \covDPromptTerraJF{}. The
+primary evaluator favored an Anthropic-written plan set by \covJudgeInteraction{} relative to
+another model's in a paired test, which is smaller than every significant gain above. Further
+checks, a comparison with systems of several calls, and the reasons these scores are not
+comparable with the leaderboard are given in Supplementary Sections~S2.5,
+S2.3 and S2.6.
+
+\FloatBarrier
+% ---------------------------------------------------------------------------------------------
+\section*{Discussion}
+\label{sec:discussion}
+\subsection*{Principal findings}
+On NOHARM's public cases, a single instruction requesting a complete, structured plan improved four
+of five models, by up to \covDPromptGrokThorough{} for the tersest, and halved the spread between
+them. Three instructed models scored above the highest bare score of any of the twelve models, so
+for these models how the model was asked mattered more than which model was chosen. The plan format
+alone reproduced the whole gain, whereas a request for the same number of recommendations without
+it did not. The added actions were mainly the follow-up and counseling that models, and physicians,
+tend to omit. However, the added content was not free of harm: read in the plans' own wording,
+\covPhysHarmful{} of the \covPhysOptions{} harmful-rated options that the instructions added were
+judged harmful by the physician.
+
+\subsection*{What a bare score measures}
+These results are consistent with NOHARM's own finding that omissions dominate its
+errors.\citep{wu2025noharm} The plan format names no clinical content, yet it recovered appropriate
+actions that the bare plans left out, which suggests that the models could produce these actions
+but did not volunteer them. A bare-case score therefore reflects two things: what a model knows and
+how much it chooses to say. The instruction removes much of the second difference, which explains
+why it narrowed the field and helped the tersest models most. The plan format appears to act as a
+checklist. It asks for the categories of action (follow-up, counseling, return precautions, doses)
+whose omission the benchmark penalizes, whereas the request for 25 recommendations, which named none
+of them, drew as many actions but fewer of the indicated ones. Unlike NOHARM's priming prompts, ours
+set no length cap. Whether the cap explains why priming left generalist models behind clinical tools
+in NOHARM's evaluation\citep{wu2025noharm} cannot be determined from our data, because the capped
+prompt was given to different models here.
+
+\subsection*{How firm these findings are}
+The direction and size of the gain for four models are the firmest result. Each gain had an
+adjusted $p$ below 0.001 and persisted when every stated action was counted in precision, and
+Terra's gain held under a third evaluator family. The finding that the plan format carries the gain
+rests on two models and one wording of each part. The safety evidence is less firm and
+less reassuring. The rubric's harmful-rated options increased for one model, a second model rater
+found a small increase for the same model, and the strictest metric reverses the gain for three
+models. The physician also judged some added options harmful as stated, but mostly in plans from the two
+models given the capped prompt rather than from the model whose harmful-rated options increased, and
+found harmful unlisted actions in bare as well as instructed plans. All results come from public cases on which the instructions were developed, scored by an AI
+evaluator rather than by physicians.
+
+\subsection*{Implications}
+For benchmark design, an unprompted protocol ranks models partly on how much they write by default.
+Reporting each model under a published, standard structured instruction beside its bare score, as
+NOHARM's own study did for priming prompts, would separate the two, as would reporting how much of a
+score rests on actions the rubric cannot see. Because the leaderboard admits models rather than
+prompts, the organizers would need to run instructed arms themselves on the held-out cases.
+
+For clinical decision support, a structured-plan instruction is an inexpensive intervention that
+recovered omitted follow-up and counseling in a single call. However, it has costs. Plans under the
+uncapped instructions stated a median of \covATerraSpec{} to \covASonnetSpec{} actions, which a
+clinician must prioritize before acting, and instructed plans included options that the physician judged
+harmful as stated. An instructed plan therefore needs the same scrutiny as any other. The benchmark represents advice to a primary-care clinician who reads,
+judges and acts on the plan. Nothing here evaluates a plan acted on without that clinician.
+
+\subsection*{Limitations}
+\label{sec:limitations}
+The study has \nCases{} base cases from one academic medical center, not \nItems{} independent
+consultations, and the instructions were developed on these cases, so the estimates may be
+optimistic. Five of twelve models were instructed, with different instructions; the instruction was
+taken apart on two models only; and the capped and uncapped instructions were given to different
+models. Regeneration noise was not measured, and several planned arms were stopped and not analyzed.
+Every score comes from an AI evaluator, not from the organizers or from physicians. The physician
+review was done by the author, who also wrote the instructions, as a single reviewer; only Part~A
+was blinded, Part~B showed the panel's rating, and no independent panel or whole-plan review was
+used.
+The usability of longer plans was not measured. The public cases have been available since June
+2026, so models scored later may have seen them.
+
+\section*{Conclusion}
+\label{sec:conclusion}
+We have found that a single structured, uncapped instruction improved NOHARM scores for four of five
+models and halved the spread between them, and that in the two models examined, the plan format
+rather than added length carried the gain. Bare-case scores of clinical completeness therefore
+partly rank how much models volunteer. However, instructed plans also included options that a physician
+judged harmful as stated. Benchmarks should report scores under a standard structured instruction beside
+bare scores, and check what the instruction adds, before models or clinical tools are compared. Further study is
+required to determine whether these gains hold on held-out cases scored by physicians.
+
+% ---------------------------------------------------------------------------------------------
+\section*{Data availability}
+Every model response, evaluation, rating, the physician review materials and the analysis code are
+archived at \url{https://github.com/OJamals/noharm-prompting} (code MIT, data CC BY 4.0). The
+offline generators \nolinkurl{scripts/noharm_paper_snapshot.py} and
+\nolinkurl{scripts/noharm_paper_analyses.py} reproduce every number in this manuscript from that
+archive without model calls. The NOHARM v2 public cases are available from their authors under CC BY
+4.0.
+
+\section*{Acknowledgments}
+Claude Code (Anthropic) and Codex (OpenAI) assisted with experiment code, analysis and drafting;
+earlier drafting used the Scientific Agent Skills workflow.\citep{kassis2026skills} AI systems are
+not authors. The TRIPOD-LLM checklist\citep{gallifant2025tripodllm} is in Supplementary
+Section~S6.
+
+\section*{Author contributions}
+Ahmad Omar Aljamal designed the study, directed the experiments and analysis, performed the
+physician review, and wrote and is responsible for the manuscript.
+
+\section*{Funding}
+This work received no funding.
+
+\section*{Conflict of interest}
+The author declares no competing interests.
+
+\section*{Ethics}
+The study reused public, de-identified benchmark data released under CC BY 4.0 and involved no
+patients or human participants other than the author as physician reviewer. It is not
+human-subjects research and was not submitted for ethics review.
+
+\begingroup
+\small
+\setlength{\bibsep}{0.3\baselineskip}
+\bibliographystyle{jamia-refs}
+\bibliography{refs}
+\endgroup
+\end{document}
